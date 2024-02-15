@@ -1,0 +1,24 @@
+
+package models
+
+// BindingsMinusSqsMinus_0Dot_2Dot_0MinusChannelBindingVersion represents an enum of BindingsMinusSqsMinus_0Dot_2Dot_0MinusChannelBindingVersion.
+type BindingsMinusSqsMinus_0Dot_2Dot_0MinusChannelBindingVersion uint
+
+const (
+  BindingsMinusSqsMinus_0Dot_2Dot_0MinusChannelBindingVersionNumber_0Dot_1Dot_0 BindingsMinusSqsMinus_0Dot_2Dot_0MinusChannelBindingVersion = iota
+  BindingsMinusSqsMinus_0Dot_2Dot_0MinusChannelBindingVersionNumber_0Dot_2Dot_0
+)
+
+// Value returns the value of the enum.
+func (op BindingsMinusSqsMinus_0Dot_2Dot_0MinusChannelBindingVersion) Value() any {
+	if op >= BindingsMinusSqsMinus_0Dot_2Dot_0MinusChannelBindingVersion(len(BindingsMinusSqsMinus_0Dot_2Dot_0MinusChannelBindingVersionValues)) {
+		return nil
+	}
+	return BindingsMinusSqsMinus_0Dot_2Dot_0MinusChannelBindingVersionValues[op]
+}
+
+var BindingsMinusSqsMinus_0Dot_2Dot_0MinusChannelBindingVersionValues = []any{"0.1.0","0.2.0"}
+var ValuesToBindingsMinusSqsMinus_0Dot_2Dot_0MinusChannelBindingVersion = map[any]BindingsMinusSqsMinus_0Dot_2Dot_0MinusChannelBindingVersion{
+  BindingsMinusSqsMinus_0Dot_2Dot_0MinusChannelBindingVersionValues[BindingsMinusSqsMinus_0Dot_2Dot_0MinusChannelBindingVersionNumber_0Dot_1Dot_0]: BindingsMinusSqsMinus_0Dot_2Dot_0MinusChannelBindingVersionNumber_0Dot_1Dot_0,
+  BindingsMinusSqsMinus_0Dot_2Dot_0MinusChannelBindingVersionValues[BindingsMinusSqsMinus_0Dot_2Dot_0MinusChannelBindingVersionNumber_0Dot_2Dot_0]: BindingsMinusSqsMinus_0Dot_2Dot_0MinusChannelBindingVersionNumber_0Dot_2Dot_0,
+}

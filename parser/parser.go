@@ -1,7 +1,10 @@
 package parser
 
-import "fmt"
+import (
+	"fmt"
+	AsyncAPI "github.com/Souvikns/parser-go/models/3.0.0" 
+)
 
-func Hello() {
-	fmt.Println("Hello ")
+func parse(file: string) {
+	// parse given spec file. 
 }

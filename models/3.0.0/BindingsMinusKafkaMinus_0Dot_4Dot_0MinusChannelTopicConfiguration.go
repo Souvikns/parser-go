@@ -1,0 +1,11 @@
+
+package models
+
+// BindingsMinusKafkaMinus_0Dot_4Dot_0MinusChannelTopicConfiguration represents a BindingsMinusKafkaMinus_0Dot_4Dot_0MinusChannelTopicConfiguration model.
+type BindingsMinusKafkaMinus_0Dot_4Dot_0MinusChannelTopicConfiguration struct {
+  CleanupDotPolicy []BindingsMinusKafkaMinus_0Dot_4Dot_0MinusChannelTopicConfigurationCleanupDotPolicyItem
+  RetentionDotMs int
+  RetentionDotBytes int
+  DeleteDotRetentionDotMs int
+  MaxDotMessageDotBytes int
+}
