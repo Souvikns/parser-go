@@ -45,9 +45,9 @@ type SchemaObject struct {
   ReservedIf interface{}
   Then interface{}
   ReservedElse interface{}
-  AllOf []
-  AnyOf []
-  OneOf []
+  AllOf []any
+  AnyOf []any
+  OneOf []any
   Not interface{}
   Discriminator string
   ExternalDocs *ExternalDocs
