@@ -1,8 +1,14 @@
-package parser
 
 import (
+	"encoding/json"
 	"errors"
+	"fmt"
+	"net/url"
+	"os"
+
+	"github.com/Souvikns/parser-go/parser"
 	"github.com/xeipuuv/gojsonschema"
+	"gopkg.in/yaml.v3"
 )
 
 type Parser struct {
@@ -16,6 +22,26 @@ func NewParser(schema []byte) *Parser {
 }
 
 func (p *Parser) Parse(data []byte) error {
+	// schemes, err := LoadSchemes()
+	// if err != nil {
+	// 	return err
+	// }
+
+	doc, err := loadDocument(data)
+	if err != nil {
+		return err
+	}
+	version, _ := extractVersion(doc)
+
+	schemes, err := LoadSchemes()
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	scheme, _ := schemes.Get(version)
+
+	
+
 	documentLoader := gojsonschema.NewBytesLoader(data)
 	result, err := gojsonschema.Validate(p.schemaLoader, documentLoader)
 	if err != nil {
@@ -31,15 +57,29 @@ func (p *Parser) Parse(data []byte) error {
 	return nil
 }
 
-func extractVersion(v interface{}) (string, error) {
-	switch doc := v.(type) {
-	case map[string]interface{}:
-		if doc["asyncapi"] == nil {
-			return "", errors.New("the `asyncapi` field is missing")
-		}
+func extractVersion(v map[string]any) (string, bool) {
+	version, err := v["asyncapi"]
+	return version.(string), err
+}
 
-		return doc["asyncapi"].(string), nil
-	default:
-		return "", errors.New("only map[string]interface{} type is supported")
+func isUrl(str string) bool {
+	u, err := url.Parse(str)
+	return err == nil && u.Scheme != "" && u.Host != ""
+}
+
+func isLocalFile(filePath string) bool {
+	_, err := os.Stat(filePath)
+	return err == nil
+}
+
+func loadDocument(document []byte) (map[string]any, error) {
+	doc := make(map[string]any)
+	err := json.Unmarshal(document, &doc)
+	if err != nil {
+		err := yaml.Unmarshal(document, &doc)
+		if err != nil {
+			return doc, errors.New("Invalid spec type, it should be json or yaml")
+		}
 	}
+	return doc, nil
 }
