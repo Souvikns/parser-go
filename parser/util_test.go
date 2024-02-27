@@ -2,6 +2,7 @@ package parser
 
 import (
 	"testing"
+	"github.com/stretchr/testify/assert"
 )
 
 const Spec = `
@@ -193,7 +194,12 @@ const Spec = `
 func TestLoadDocument(t *testing.T) {
 	got, _ := loadDocument([]byte(Spec))
 	want := "3.0.0"
-	if got["asyncapi"] != want {
-		t.Errorf("error")
-	}
+	assert.Contains(t, got["asyncapi"], want)
+}
+
+func TestExtractVersion(t *testing.T) {
+	doc, _ := loadDocument([]byte(Spec))
+	got, _ := extractVersion(doc)
+	want := "3.0.0"
+	assert.Contains(t, got, want)
 }
