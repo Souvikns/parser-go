@@ -209,7 +209,8 @@ func TestExtractVersion(t *testing.T) {
 func TestValidateScheme(t *testing.T) {
 	doc, _ := loadDocument([]byte(Spec))
 	version, _ := extractVersion(doc)
-	schemes, _ := scheme.LoadSchemes()
+	schemes, e := scheme.LoadSchemes()
+	assert.Nil(t, e)
 	schema, _ := schemes.Get(version)
 	err := validateSchema(schema.Definition, Spec)
 	assert.Nil(t, err)

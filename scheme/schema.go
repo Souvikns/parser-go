@@ -20,13 +20,13 @@ type Schemas struct {
 }
 
 func LoadSchemes() (schemas Schemas, err error) {
-	files, err := os.ReadDir("generator/definitions/")
+	files, err := os.ReadDir("../generator/definitions/")
 	if err != nil {
 		return schemas, err
 	}
 
 	for _, f := range files {
-		data, err := os.ReadFile("generator/definitions/" + f.Name())
+		data, err := os.ReadFile("../generator/definitions/" + f.Name())
 		if err != nil {
 			return schemas, err
 		}
