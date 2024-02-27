@@ -13,8 +13,8 @@ func Parse(document string) (any, error) {
 		return nil, err
 	}
 	version, found := extractVersion(doc)
-	if found == false {
-		return nil, errors.New("Missing asyncapi property")
+	if !found {
+		return nil, errors.New("missing asyncapi property")
 	}
 
 	return version, nil
