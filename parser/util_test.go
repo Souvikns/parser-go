@@ -196,19 +196,19 @@ const Spec = `
 func TestLoadDocument(t *testing.T) {
 	got, _ := loadDocument([]byte(Spec))
 	want := "3.0.0"
-	assert.Contains(t, got["asyncapi"], want)
+	assert.Contains(t, got.Doc["asyncapi"], want)
 }
 
 func TestExtractVersion(t *testing.T) {
 	doc, _ := loadDocument([]byte(Spec))
-	got, _ := extractVersion(doc)
+	got, _ := extractVersion(doc.Doc)
 	want := "3.0.0"
 	assert.Contains(t, got, want)
 }
 
 func TestValidateScheme(t *testing.T) {
 	doc, _ := loadDocument([]byte(Spec))
-	version, _ := extractVersion(doc)
+	version, _ := extractVersion(doc.Doc)
 	schemes, e := scheme.LoadSchemes()
 	assert.Nil(t, e)
 	schema, _ := schemes.Get(version)
