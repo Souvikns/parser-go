@@ -1,11 +1,7 @@
-package main
+package parser
 
 import (
-	"fmt"
-
-	//"github.com/Souvikns/parser-go/models/3.0.0"
-	//"gopkg.in/yaml.v3"
-	"github.com/Souvikns/parser-go/parser"
+	"testing"
 )
 
 const Spec = `
@@ -194,25 +190,10 @@ const Spec = `
   }
 `
 
-func main() {
-	// var spec models.AsyncApi_3Dot_0Dot_0SchemaDot
-	// err := yaml.Unmarshal([]byte(Spec), &spec)
-	// if err != nil {
-	// 	fmt.Println(err)
-	// }
-	// fmt.Println(spec.Asyncapi)
-	schemes, err := parser.LoadSchemes()
-	if err != nil {
-		fmt.Println(err)
+func TestLoadDocument(t *testing.T) {
+	got, _ := loadDocument([]byte(Spec))
+	want := "3.0.0"
+	if got["asyncapi"] != want {
+		t.Errorf("error")
 	}
-
-	scheme, _ := schemes.Get("3.0.0")
-
-	parser := parser.NewParser(scheme.Definition)
-
-	err = parser.Parse([]byte(Spec))
-	if err != nil {
-		fmt.Println(err)
-	}
-	
 }
