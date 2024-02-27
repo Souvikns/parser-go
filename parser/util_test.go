@@ -2,6 +2,8 @@ package parser
 
 import (
 	"testing"
+
+	"github.com/Souvikns/parser-go/scheme"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -202,4 +204,13 @@ func TestExtractVersion(t *testing.T) {
 	got, _ := extractVersion(doc)
 	want := "3.0.0"
 	assert.Contains(t, got, want)
+}
+
+func TestValidateScheme(t *testing.T) {
+	doc, _ := loadDocument([]byte(Spec))
+	version, _ := extractVersion(doc)
+	schemes, _ := scheme.LoadSchemes()
+	schema, _ := schemes.Get(version)
+	err := validateSchema(schema.Definition, Spec)
+	assert.Nil(t, err)
 }
