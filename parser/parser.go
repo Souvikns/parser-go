@@ -2,6 +2,7 @@ package parser
 
 import (
 	"errors"
+	"github.com/Souvikns/parser-go/scheme"
 	"io"
 	"net/http"
 	"os"
@@ -15,6 +16,23 @@ func Parse(document string) (any, error) {
 	version, found := extractVersion(doc)
 	if !found {
 		return nil, errors.New("missing asyncapi property")
+	}
+
+	// load correct scheme according to the version of the asyncapi document
+	// if the document has not errors then create the appropriate model generated from the document
+	// and return it.
+	schemes, err := scheme.LoadSchemes()
+	if err != nil {
+		return nil, err
+	}
+	schema, err := schemes.Get(version)
+	if err != nil {
+		return nil, err
+	}
+
+	err = validateSchema(schema.Definition, document)
+	if err != nil {
+		return nil, err
 	}
 
 	return version, nil
