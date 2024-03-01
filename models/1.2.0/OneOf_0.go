@@ -3,16 +3,16 @@ package models
 
 // OneOf_0 represents a OneOf_0 model.
 type OneOf_0 struct {
-  Asyncapi *Asyncapi
-  Info *Info
-  BaseTopic string
-  Servers []Server
-  Topics *Topics
-  Stream *StreamObject
-  Events interface{}
-  Components *Components
-  Tags []Tag
-  Security []map[string][]string
-  ExternalDocs *ExternalDocs
-  AdditionalProperties map[string]interface{}
+  Asyncapi *Asyncapi `json:asyncapi`
+  Info *Info `json:info`
+  BaseTopic string `json:baseTopic`
+  Servers []Server `json:servers`
+  Topics *Topics `json:topics`
+  Stream *StreamObject `json:stream`
+  Events interface{} `json:events`
+  Components *Components `json:components`
+  Tags []Tag `json:tags`
+  Security []map[string][]string `json:security`
+  ExternalDocs *ExternalDocs `json:externalDocs`
+  AdditionalProperties map[string]interface{} `json:additionalProperties`
 }

@@ -3,11 +3,11 @@ package models
 
 // ServerBindingsObjectIbmmq represents a ServerBindingsObjectIbmmq model.
 type ServerBindingsObjectIbmmq struct {
-  BindingVersion *ServerBindingsObjectIbmmqBindingVersion
-  GroupId string
-  CcdtQueueManagerName string
-  CipherSpec string
-  MultiEndpointServer bool
-  HeartBeatInterval int
-  AdditionalProperties map[string]interface{}
+  BindingVersion *ServerBindingsObjectIbmmqBindingVersion `json:"bindingVersion"`
+  GroupId string `json:"groupId"`
+  CcdtQueueManagerName string `json:"ccdtQueueManagerName"`
+  CipherSpec string `json:"cipherSpec"`
+  MultiEndpointServer bool `json:"multiEndpointServer"`
+  HeartBeatInterval int `json:"heartBeatInterval"`
+  AdditionalProperties map[string]interface{} `json:"-"`
 }

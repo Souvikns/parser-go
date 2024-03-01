@@ -1,6 +1,8 @@
 
 package models
-
+import (  
+  "encoding/json"
+)
 // BindingsMinusKafkaMinus_0Dot_4Dot_0MinusChannelTopicConfigurationCleanupDotPolicyItem represents an enum of BindingsMinusKafkaMinus_0Dot_4Dot_0MinusChannelTopicConfigurationCleanupDotPolicyItem.
 type BindingsMinusKafkaMinus_0Dot_4Dot_0MinusChannelTopicConfigurationCleanupDotPolicyItem uint
 
@@ -22,3 +24,19 @@ var ValuesToBindingsMinusKafkaMinus_0Dot_4Dot_0MinusChannelTopicConfigurationCle
   BindingsMinusKafkaMinus_0Dot_4Dot_0MinusChannelTopicConfigurationCleanupDotPolicyItemValues[BindingsMinusKafkaMinus_0Dot_4Dot_0MinusChannelTopicConfigurationCleanupDotPolicyItemCompact]: BindingsMinusKafkaMinus_0Dot_4Dot_0MinusChannelTopicConfigurationCleanupDotPolicyItemCompact,
   BindingsMinusKafkaMinus_0Dot_4Dot_0MinusChannelTopicConfigurationCleanupDotPolicyItemValues[BindingsMinusKafkaMinus_0Dot_4Dot_0MinusChannelTopicConfigurationCleanupDotPolicyItemDelete]: BindingsMinusKafkaMinus_0Dot_4Dot_0MinusChannelTopicConfigurationCleanupDotPolicyItemDelete,
 }
+
+ 
+          
+func (op *BindingsMinusKafkaMinus_0Dot_4Dot_0MinusChannelTopicConfigurationCleanupDotPolicyItem) UnmarshalJSON(raw []byte) error {
+	var v any
+	if err := json.Unmarshal(raw, &v); err != nil {
+		return err
+	}
+	*op = ValuesToBindingsMinusKafkaMinus_0Dot_4Dot_0MinusChannelTopicConfigurationCleanupDotPolicyItem[v]
+	return nil
+}
+
+func (op BindingsMinusKafkaMinus_0Dot_4Dot_0MinusChannelTopicConfigurationCleanupDotPolicyItem) MarshalJSON() ([]byte, error) {
+	return json.Marshal(op.Value())
+} 
+          

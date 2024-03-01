@@ -3,12 +3,12 @@ package models
 
 // ServerBindingsObjectMqtt represents a ServerBindingsObjectMqtt model.
 type ServerBindingsObjectMqtt struct {
-  BindingVersion *ServerBindingsObjectMqttBindingVersion
-  ClientId string
-  CleanSession bool
-  LastWill *BindingsMinusMqttMinus_0Dot_2Dot_0MinusServerLastWill
-  KeepAlive int
-  SessionExpiryInterval interface{}
-  MaximumPacketSize interface{}
-  AdditionalProperties map[string]interface{}
+  BindingVersion *ServerBindingsObjectMqttBindingVersion `json:"bindingVersion"`
+  ClientId string `json:"clientId"`
+  CleanSession bool `json:"cleanSession"`
+  LastWill *BindingsMinusMqttMinus_0Dot_2Dot_0MinusServerLastWill `json:"lastWill"`
+  KeepAlive int `json:"keepAlive"`
+  SessionExpiryInterval interface{} `json:"sessionExpiryInterval"`
+  MaximumPacketSize interface{} `json:"maximumPacketSize"`
+  AdditionalProperties map[string]interface{} `json:"-"`
 }

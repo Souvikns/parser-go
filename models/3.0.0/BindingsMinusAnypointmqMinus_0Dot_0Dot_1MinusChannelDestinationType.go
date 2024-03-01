@@ -1,6 +1,8 @@
 
 package models
-
+import (  
+  "encoding/json"
+)
 // BindingsMinusAnypointmqMinus_0Dot_0Dot_1MinusChannelDestinationType represents an enum of BindingsMinusAnypointmqMinus_0Dot_0Dot_1MinusChannelDestinationType.
 type BindingsMinusAnypointmqMinus_0Dot_0Dot_1MinusChannelDestinationType uint
 
@@ -24,3 +26,19 @@ var ValuesToBindingsMinusAnypointmqMinus_0Dot_0Dot_1MinusChannelDestinationType 
   BindingsMinusAnypointmqMinus_0Dot_0Dot_1MinusChannelDestinationTypeValues[BindingsMinusAnypointmqMinus_0Dot_0Dot_1MinusChannelDestinationTypeQueue]: BindingsMinusAnypointmqMinus_0Dot_0Dot_1MinusChannelDestinationTypeQueue,
   BindingsMinusAnypointmqMinus_0Dot_0Dot_1MinusChannelDestinationTypeValues[BindingsMinusAnypointmqMinus_0Dot_0Dot_1MinusChannelDestinationTypeFifoMinusQueue]: BindingsMinusAnypointmqMinus_0Dot_0Dot_1MinusChannelDestinationTypeFifoMinusQueue,
 }
+
+ 
+          
+func (op *BindingsMinusAnypointmqMinus_0Dot_0Dot_1MinusChannelDestinationType) UnmarshalJSON(raw []byte) error {
+	var v any
+	if err := json.Unmarshal(raw, &v); err != nil {
+		return err
+	}
+	*op = ValuesToBindingsMinusAnypointmqMinus_0Dot_0Dot_1MinusChannelDestinationType[v]
+	return nil
+}
+
+func (op BindingsMinusAnypointmqMinus_0Dot_0Dot_1MinusChannelDestinationType) MarshalJSON() ([]byte, error) {
+	return json.Marshal(op.Value())
+} 
+          

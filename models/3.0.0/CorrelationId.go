@@ -3,7 +3,7 @@ package models
 
 // CorrelationId represents a CorrelationId model.
 type CorrelationId struct {
-  Description string
-  Location string
-  AdditionalProperties map[string]interface{}
+  Description string `json:"description"`
+  Location string `json:"location"`
+  AdditionalProperties map[string]interface{} `json:"-"`
 }

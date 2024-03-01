@@ -3,7 +3,7 @@ package models
 
 // ExternalDocs represents a ExternalDocs model.
 type ExternalDocs struct {
-  Description string
-  Url string
-  AdditionalProperties map[string]interface{}
+  Description string `json:"description"`
+  Url string `json:"url"`
+  AdditionalProperties map[string]interface{} `json:"-"`
 }

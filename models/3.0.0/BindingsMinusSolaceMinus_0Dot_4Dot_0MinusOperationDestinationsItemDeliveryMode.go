@@ -1,6 +1,8 @@
 
 package models
-
+import (  
+  "encoding/json"
+)
 // BindingsMinusSolaceMinus_0Dot_4Dot_0MinusOperationDestinationsItemDeliveryMode represents an enum of BindingsMinusSolaceMinus_0Dot_4Dot_0MinusOperationDestinationsItemDeliveryMode.
 type BindingsMinusSolaceMinus_0Dot_4Dot_0MinusOperationDestinationsItemDeliveryMode uint
 
@@ -22,3 +24,19 @@ var ValuesToBindingsMinusSolaceMinus_0Dot_4Dot_0MinusOperationDestinationsItemDe
   BindingsMinusSolaceMinus_0Dot_4Dot_0MinusOperationDestinationsItemDeliveryModeValues[BindingsMinusSolaceMinus_0Dot_4Dot_0MinusOperationDestinationsItemDeliveryModeDirect]: BindingsMinusSolaceMinus_0Dot_4Dot_0MinusOperationDestinationsItemDeliveryModeDirect,
   BindingsMinusSolaceMinus_0Dot_4Dot_0MinusOperationDestinationsItemDeliveryModeValues[BindingsMinusSolaceMinus_0Dot_4Dot_0MinusOperationDestinationsItemDeliveryModePersistent]: BindingsMinusSolaceMinus_0Dot_4Dot_0MinusOperationDestinationsItemDeliveryModePersistent,
 }
+
+ 
+          
+func (op *BindingsMinusSolaceMinus_0Dot_4Dot_0MinusOperationDestinationsItemDeliveryMode) UnmarshalJSON(raw []byte) error {
+	var v any
+	if err := json.Unmarshal(raw, &v); err != nil {
+		return err
+	}
+	*op = ValuesToBindingsMinusSolaceMinus_0Dot_4Dot_0MinusOperationDestinationsItemDeliveryMode[v]
+	return nil
+}
+
+func (op BindingsMinusSolaceMinus_0Dot_4Dot_0MinusOperationDestinationsItemDeliveryMode) MarshalJSON() ([]byte, error) {
+	return json.Marshal(op.Value())
+} 
+          

@@ -1,6 +1,8 @@
 
 package models
-
+import (  
+  "encoding/json"
+)
 // BindingsMinusKafkaMinus_0Dot_4Dot_0MinusMessageSchemaIdLocation represents an enum of BindingsMinusKafkaMinus_0Dot_4Dot_0MinusMessageSchemaIdLocation.
 type BindingsMinusKafkaMinus_0Dot_4Dot_0MinusMessageSchemaIdLocation uint
 
@@ -22,3 +24,19 @@ var ValuesToBindingsMinusKafkaMinus_0Dot_4Dot_0MinusMessageSchemaIdLocation = ma
   BindingsMinusKafkaMinus_0Dot_4Dot_0MinusMessageSchemaIdLocationValues[BindingsMinusKafkaMinus_0Dot_4Dot_0MinusMessageSchemaIdLocationHeader]: BindingsMinusKafkaMinus_0Dot_4Dot_0MinusMessageSchemaIdLocationHeader,
   BindingsMinusKafkaMinus_0Dot_4Dot_0MinusMessageSchemaIdLocationValues[BindingsMinusKafkaMinus_0Dot_4Dot_0MinusMessageSchemaIdLocationPayload]: BindingsMinusKafkaMinus_0Dot_4Dot_0MinusMessageSchemaIdLocationPayload,
 }
+
+ 
+          
+func (op *BindingsMinusKafkaMinus_0Dot_4Dot_0MinusMessageSchemaIdLocation) UnmarshalJSON(raw []byte) error {
+	var v any
+	if err := json.Unmarshal(raw, &v); err != nil {
+		return err
+	}
+	*op = ValuesToBindingsMinusKafkaMinus_0Dot_4Dot_0MinusMessageSchemaIdLocation[v]
+	return nil
+}
+
+func (op BindingsMinusKafkaMinus_0Dot_4Dot_0MinusMessageSchemaIdLocation) MarshalJSON() ([]byte, error) {
+	return json.Marshal(op.Value())
+} 
+          

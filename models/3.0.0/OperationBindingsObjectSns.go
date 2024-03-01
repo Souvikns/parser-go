@@ -3,9 +3,9 @@ package models
 
 // OperationBindingsObjectSns represents a OperationBindingsObjectSns model.
 type OperationBindingsObjectSns struct {
-  BindingVersion string
-  Topic *OperationSchema
-  Consumers []OperationSchema
-  DeliveryPolicy *OperationSchema
-  AdditionalProperties map[string]interface{}
+  BindingVersion string `json:"bindingVersion"`
+  Topic *OperationSchema `json:"topic"`
+  Consumers []OperationSchema `json:"consumers"`
+  DeliveryPolicy *OperationSchema `json:"deliveryPolicy"`
+  AdditionalProperties map[string]interface{} `json:"-"`
 }

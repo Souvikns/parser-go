@@ -1,6 +1,8 @@
 
 package models
-
+import (  
+  "encoding/json"
+)
 // SaslScramSecuritySchemeType represents an enum of SaslScramSecuritySchemeType.
 type SaslScramSecuritySchemeType uint
 
@@ -22,3 +24,19 @@ var ValuesToSaslScramSecuritySchemeType = map[any]SaslScramSecuritySchemeType{
   SaslScramSecuritySchemeTypeValues[SaslScramSecuritySchemeTypeScramSha256]: SaslScramSecuritySchemeTypeScramSha256,
   SaslScramSecuritySchemeTypeValues[SaslScramSecuritySchemeTypeScramSha512]: SaslScramSecuritySchemeTypeScramSha512,
 }
+
+ 
+          
+func (op *SaslScramSecuritySchemeType) UnmarshalJSON(raw []byte) error {
+	var v any
+	if err := json.Unmarshal(raw, &v); err != nil {
+		return err
+	}
+	*op = ValuesToSaslScramSecuritySchemeType[v]
+	return nil
+}
+
+func (op SaslScramSecuritySchemeType) MarshalJSON() ([]byte, error) {
+	return json.Marshal(op.Value())
+} 
+          

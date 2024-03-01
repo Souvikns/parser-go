@@ -3,7 +3,7 @@ package models
 
 // SaslScramSecurityScheme represents a SaslScramSecurityScheme model.
 type SaslScramSecurityScheme struct {
-  ReservedType *SaslScramSecuritySchemeType
-  Description string
-  AdditionalProperties map[string]interface{}
+  ReservedType *SaslScramSecuritySchemeType `json:"type"`
+  Description string `json:"description"`
+  AdditionalProperties map[string]interface{} `json:"-"`
 }

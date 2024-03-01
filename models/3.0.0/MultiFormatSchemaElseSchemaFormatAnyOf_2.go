@@ -1,6 +1,8 @@
 
 package models
-
+import (  
+  "encoding/json"
+)
 // MultiFormatSchemaElseSchemaFormatAnyOf_2 represents an enum of MultiFormatSchemaElseSchemaFormatAnyOf_2.
 type MultiFormatSchemaElseSchemaFormatAnyOf_2 uint
 
@@ -32,3 +34,19 @@ var ValuesToMultiFormatSchemaElseSchemaFormatAnyOf_2 = map[any]MultiFormatSchema
   MultiFormatSchemaElseSchemaFormatAnyOf_2Values[MultiFormatSchemaElseSchemaFormatAnyOf_2ApplicationSlashVndDotApacheDotAvroPlusYamlSemicolonVersionEqual_1Dot_9Dot_0]: MultiFormatSchemaElseSchemaFormatAnyOf_2ApplicationSlashVndDotApacheDotAvroPlusYamlSemicolonVersionEqual_1Dot_9Dot_0,
   MultiFormatSchemaElseSchemaFormatAnyOf_2Values[MultiFormatSchemaElseSchemaFormatAnyOf_2ApplicationSlashRamlPlusYamlSemicolonVersionEqual_1Dot_0]: MultiFormatSchemaElseSchemaFormatAnyOf_2ApplicationSlashRamlPlusYamlSemicolonVersionEqual_1Dot_0,
 }
+
+ 
+          
+func (op *MultiFormatSchemaElseSchemaFormatAnyOf_2) UnmarshalJSON(raw []byte) error {
+	var v any
+	if err := json.Unmarshal(raw, &v); err != nil {
+		return err
+	}
+	*op = ValuesToMultiFormatSchemaElseSchemaFormatAnyOf_2[v]
+	return nil
+}
+
+func (op MultiFormatSchemaElseSchemaFormatAnyOf_2) MarshalJSON() ([]byte, error) {
+	return json.Marshal(op.Value())
+} 
+          

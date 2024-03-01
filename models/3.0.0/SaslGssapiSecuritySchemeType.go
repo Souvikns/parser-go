@@ -1,6 +1,8 @@
 
 package models
-
+import (  
+  "encoding/json"
+)
 // SaslGssapiSecuritySchemeType represents an enum of SaslGssapiSecuritySchemeType.
 type SaslGssapiSecuritySchemeType uint
 
@@ -20,3 +22,19 @@ var SaslGssapiSecuritySchemeTypeValues = []any{"gssapi"}
 var ValuesToSaslGssapiSecuritySchemeType = map[any]SaslGssapiSecuritySchemeType{
   SaslGssapiSecuritySchemeTypeValues[SaslGssapiSecuritySchemeTypeGssapi]: SaslGssapiSecuritySchemeTypeGssapi,
 }
+
+ 
+          
+func (op *SaslGssapiSecuritySchemeType) UnmarshalJSON(raw []byte) error {
+	var v any
+	if err := json.Unmarshal(raw, &v); err != nil {
+		return err
+	}
+	*op = ValuesToSaslGssapiSecuritySchemeType[v]
+	return nil
+}
+
+func (op SaslGssapiSecuritySchemeType) MarshalJSON() ([]byte, error) {
+	return json.Marshal(op.Value())
+} 
+          

@@ -3,9 +3,9 @@ package models
 
 // Xml represents a Xml model.
 type Xml struct {
-  Name string
-  Namespace string
-  Prefix string
-  Attribute bool
-  Wrapped bool
+  Name string `json:name`
+  Namespace string `json:namespace`
+  Prefix string `json:prefix`
+  Attribute bool `json:attribute`
+  Wrapped bool `json:wrapped`
 }

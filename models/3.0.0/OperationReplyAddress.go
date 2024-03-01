@@ -3,7 +3,7 @@ package models
 
 // OperationReplyAddress represents a OperationReplyAddress model.
 type OperationReplyAddress struct {
-  Location string
-  Description string
-  AdditionalProperties map[string]interface{}
+  Location string `json:"location"`
+  Description string `json:"description"`
+  AdditionalProperties map[string]interface{} `json:"-"`
 }

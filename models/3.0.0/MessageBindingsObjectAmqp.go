@@ -3,8 +3,8 @@ package models
 
 // MessageBindingsObjectAmqp represents a MessageBindingsObjectAmqp model.
 type MessageBindingsObjectAmqp struct {
-  BindingVersion *MessageBindingsObjectAmqpBindingVersion
-  ContentEncoding string
-  MessageType string
-  AdditionalProperties map[string]interface{}
+  BindingVersion *MessageBindingsObjectAmqpBindingVersion `json:"bindingVersion"`
+  ContentEncoding string `json:"contentEncoding"`
+  MessageType string `json:"messageType"`
+  AdditionalProperties map[string]interface{} `json:"-"`
 }

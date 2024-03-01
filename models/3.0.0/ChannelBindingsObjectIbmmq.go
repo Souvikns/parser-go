@@ -3,6 +3,6 @@ package models
 
 // ChannelBindingsObjectIbmmq represents a ChannelBindingsObjectIbmmq model.
 type ChannelBindingsObjectIbmmq struct {
-  BindingVersion *ChannelBindingsObjectIbmmqBindingVersion
-  AdditionalProperties map[string]interface{}
+  BindingVersion *ChannelBindingsObjectIbmmqBindingVersion `json:"bindingVersion"`
+  AdditionalProperties map[string]interface{} `json:"-"`
 }

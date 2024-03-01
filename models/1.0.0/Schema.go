@@ -3,35 +3,35 @@ package models
 
 // Schema represents a Schema model.
 type Schema struct {
-  Ref string
-  Format string
-  Title *JsonMinusSchemaMinusDraftMinus_07MinusSchema
-  Description *JsonMinusSchemaMinusDraftMinus_07MinusSchema
-  ReservedDefault *JsonMinusSchemaMinusDraftMinus_07MinusSchema
-  MultipleOf *JsonMinusSchemaMinusDraftMinus_07MinusSchema
-  Maximum *JsonMinusSchemaMinusDraftMinus_07MinusSchema
-  ExclusiveMaximum *JsonMinusSchemaMinusDraftMinus_07MinusSchema
-  Minimum *JsonMinusSchemaMinusDraftMinus_07MinusSchema
-  ExclusiveMinimum *JsonMinusSchemaMinusDraftMinus_07MinusSchema
-  MaxLength *JsonMinusSchemaMinusDraftMinus_07MinusSchema
-  MinLength *JsonMinusSchemaMinusDraftMinus_07MinusSchema
-  Pattern *JsonMinusSchemaMinusDraftMinus_07MinusSchema
-  MaxItems *JsonMinusSchemaMinusDraftMinus_07MinusSchema
-  MinItems *JsonMinusSchemaMinusDraftMinus_07MinusSchema
-  UniqueItems *JsonMinusSchemaMinusDraftMinus_07MinusSchema
-  MaxProperties *JsonMinusSchemaMinusDraftMinus_07MinusSchema
-  MinProperties *JsonMinusSchemaMinusDraftMinus_07MinusSchema
-  Required *JsonMinusSchemaMinusDraftMinus_07MinusSchema
-  Enum *JsonMinusSchemaMinusDraftMinus_07MinusSchema
-  AdditionalProperties interface{}
-  ReservedType *JsonMinusSchemaMinusDraftMinus_07MinusSchema
-  Items interface{}
-  AllOf []Schema
-  Properties map[string]Schema
-  Discriminator string
-  ReadOnly bool
-  Xml *Xml
-  ExternalDocs *ExternalDocs
-  Example interface{}
-  ReservedAdditionalProperties map[string]interface{}
+  Ref string `json:$ref`
+  Format string `json:format`
+  Title *JsonMinusSchemaMinusDraftMinus_07MinusSchema `json:title`
+  Description *JsonMinusSchemaMinusDraftMinus_07MinusSchema `json:description`
+  ReservedDefault *JsonMinusSchemaMinusDraftMinus_07MinusSchema `json:default`
+  MultipleOf *JsonMinusSchemaMinusDraftMinus_07MinusSchema `json:multipleOf`
+  Maximum *JsonMinusSchemaMinusDraftMinus_07MinusSchema `json:maximum`
+  ExclusiveMaximum *JsonMinusSchemaMinusDraftMinus_07MinusSchema `json:exclusiveMaximum`
+  Minimum *JsonMinusSchemaMinusDraftMinus_07MinusSchema `json:minimum`
+  ExclusiveMinimum *JsonMinusSchemaMinusDraftMinus_07MinusSchema `json:exclusiveMinimum`
+  MaxLength *JsonMinusSchemaMinusDraftMinus_07MinusSchema `json:maxLength`
+  MinLength *JsonMinusSchemaMinusDraftMinus_07MinusSchema `json:minLength`
+  Pattern *JsonMinusSchemaMinusDraftMinus_07MinusSchema `json:pattern`
+  MaxItems *JsonMinusSchemaMinusDraftMinus_07MinusSchema `json:maxItems`
+  MinItems *JsonMinusSchemaMinusDraftMinus_07MinusSchema `json:minItems`
+  UniqueItems *JsonMinusSchemaMinusDraftMinus_07MinusSchema `json:uniqueItems`
+  MaxProperties *JsonMinusSchemaMinusDraftMinus_07MinusSchema `json:maxProperties`
+  MinProperties *JsonMinusSchemaMinusDraftMinus_07MinusSchema `json:minProperties`
+  Required *JsonMinusSchemaMinusDraftMinus_07MinusSchema `json:required`
+  Enum *JsonMinusSchemaMinusDraftMinus_07MinusSchema `json:enum`
+  AdditionalProperties interface{} `json:additionalProperties`
+  ReservedType *JsonMinusSchemaMinusDraftMinus_07MinusSchema `json:type`
+  Items interface{} `json:items`
+  AllOf []Schema `json:allOf`
+  Properties map[string]Schema `json:properties`
+  Discriminator string `json:discriminator`
+  ReadOnly bool `json:readOnly`
+  Xml *Xml `json:xml`
+  ExternalDocs *ExternalDocs `json:externalDocs`
+  Example interface{} `json:example`
+  ReservedAdditionalProperties map[string]interface{} `json:reserved_additionalProperties`
 }

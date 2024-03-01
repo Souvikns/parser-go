@@ -3,7 +3,7 @@ package models
 
 // License represents a License model.
 type License struct {
-  Name string
-  Url string
-  AdditionalProperties map[string]interface{}
+  Name string `json:"name"`
+  Url string `json:"url"`
+  AdditionalProperties map[string]interface{} `json:"-"`
 }

@@ -3,11 +3,11 @@ package models
 
 // Field represents a Field model.
 type Field struct {
-  Name string
-  ReservedType interface{}
-  Doc string
-  ReservedDefault interface{}
-  Order *AvroSchemaV1AvroFieldOrder
-  Aliases []string
-  AdditionalProperties map[string]interface{}
+  Name string `json:"name"`
+  ReservedType interface{} `json:"type"`
+  Doc string `json:"doc"`
+  ReservedDefault interface{} `json:"default"`
+  Order *AvroSchemaV1AvroFieldOrder `json:"order"`
+  Aliases []string `json:"aliases"`
+  AdditionalProperties map[string]interface{} `json:"-"`
 }

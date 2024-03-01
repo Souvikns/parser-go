@@ -1,6 +1,8 @@
 
 package models
-
+import (  
+  "encoding/json"
+)
 // ServerBindingsObjectSolaceBindingVersion represents an enum of ServerBindingsObjectSolaceBindingVersion.
 type ServerBindingsObjectSolaceBindingVersion uint
 
@@ -24,3 +26,19 @@ var ValuesToServerBindingsObjectSolaceBindingVersion = map[any]ServerBindingsObj
   ServerBindingsObjectSolaceBindingVersionValues[ServerBindingsObjectSolaceBindingVersionNumber_0Dot_3Dot_0]: ServerBindingsObjectSolaceBindingVersionNumber_0Dot_3Dot_0,
   ServerBindingsObjectSolaceBindingVersionValues[ServerBindingsObjectSolaceBindingVersionNumber_0Dot_2Dot_0]: ServerBindingsObjectSolaceBindingVersionNumber_0Dot_2Dot_0,
 }
+
+ 
+          
+func (op *ServerBindingsObjectSolaceBindingVersion) UnmarshalJSON(raw []byte) error {
+	var v any
+	if err := json.Unmarshal(raw, &v); err != nil {
+		return err
+	}
+	*op = ValuesToServerBindingsObjectSolaceBindingVersion[v]
+	return nil
+}
+
+func (op ServerBindingsObjectSolaceBindingVersion) MarshalJSON() ([]byte, error) {
+	return json.Marshal(op.Value())
+} 
+          

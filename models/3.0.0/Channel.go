@@ -3,15 +3,15 @@ package models
 
 // Channel represents a Channel model.
 type Channel struct {
-  Address string
-  Messages map[string]interface{}
-  Parameters map[string]interface{}
-  Title string
-  Summary string
-  Description string
-  Servers []Reference
-  Tags []interface{}
-  ExternalDocs interface{}
-  Bindings interface{}
-  AdditionalProperties map[string]interface{}
+  Address string `json:"address"`
+  Messages map[string]interface{} `json:"messages"`
+  Parameters map[string]interface{} `json:"parameters"`
+  Title string `json:"title"`
+  Summary string `json:"summary"`
+  Description string `json:"description"`
+  Servers []Reference `json:"servers"`
+  Tags []interface{} `json:"tags"`
+  ExternalDocs interface{} `json:"externalDocs"`
+  Bindings interface{} `json:"bindings"`
+  AdditionalProperties map[string]interface{} `json:"-"`
 }

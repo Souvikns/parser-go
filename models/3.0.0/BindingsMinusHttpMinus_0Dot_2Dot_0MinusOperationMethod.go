@@ -1,6 +1,8 @@
 
 package models
-
+import (  
+  "encoding/json"
+)
 // BindingsMinusHttpMinus_0Dot_2Dot_0MinusOperationMethod represents an enum of BindingsMinusHttpMinus_0Dot_2Dot_0MinusOperationMethod.
 type BindingsMinusHttpMinus_0Dot_2Dot_0MinusOperationMethod uint
 
@@ -36,3 +38,19 @@ var ValuesToBindingsMinusHttpMinus_0Dot_2Dot_0MinusOperationMethod = map[any]Bin
   BindingsMinusHttpMinus_0Dot_2Dot_0MinusOperationMethodValues[BindingsMinusHttpMinus_0Dot_2Dot_0MinusOperationMethodConnect]: BindingsMinusHttpMinus_0Dot_2Dot_0MinusOperationMethodConnect,
   BindingsMinusHttpMinus_0Dot_2Dot_0MinusOperationMethodValues[BindingsMinusHttpMinus_0Dot_2Dot_0MinusOperationMethodTrace]: BindingsMinusHttpMinus_0Dot_2Dot_0MinusOperationMethodTrace,
 }
+
+ 
+          
+func (op *BindingsMinusHttpMinus_0Dot_2Dot_0MinusOperationMethod) UnmarshalJSON(raw []byte) error {
+	var v any
+	if err := json.Unmarshal(raw, &v); err != nil {
+		return err
+	}
+	*op = ValuesToBindingsMinusHttpMinus_0Dot_2Dot_0MinusOperationMethod[v]
+	return nil
+}
+
+func (op BindingsMinusHttpMinus_0Dot_2Dot_0MinusOperationMethod) MarshalJSON() ([]byte, error) {
+	return json.Marshal(op.Value())
+} 
+          

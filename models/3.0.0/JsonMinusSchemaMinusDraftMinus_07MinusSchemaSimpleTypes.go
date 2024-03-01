@@ -1,6 +1,8 @@
 
 package models
-
+import (  
+  "encoding/json"
+)
 // JsonMinusSchemaMinusDraftMinus_07MinusSchemaSimpleTypes represents an enum of JsonMinusSchemaMinusDraftMinus_07MinusSchemaSimpleTypes.
 type JsonMinusSchemaMinusDraftMinus_07MinusSchemaSimpleTypes uint
 
@@ -32,3 +34,19 @@ var ValuesToJsonMinusSchemaMinusDraftMinus_07MinusSchemaSimpleTypes = map[any]Js
   JsonMinusSchemaMinusDraftMinus_07MinusSchemaSimpleTypesValues[JsonMinusSchemaMinusDraftMinus_07MinusSchemaSimpleTypesObject]: JsonMinusSchemaMinusDraftMinus_07MinusSchemaSimpleTypesObject,
   JsonMinusSchemaMinusDraftMinus_07MinusSchemaSimpleTypesValues[JsonMinusSchemaMinusDraftMinus_07MinusSchemaSimpleTypesString]: JsonMinusSchemaMinusDraftMinus_07MinusSchemaSimpleTypesString,
 }
+
+ 
+          
+func (op *JsonMinusSchemaMinusDraftMinus_07MinusSchemaSimpleTypes) UnmarshalJSON(raw []byte) error {
+	var v any
+	if err := json.Unmarshal(raw, &v); err != nil {
+		return err
+	}
+	*op = ValuesToJsonMinusSchemaMinusDraftMinus_07MinusSchemaSimpleTypes[v]
+	return nil
+}
+
+func (op JsonMinusSchemaMinusDraftMinus_07MinusSchemaSimpleTypes) MarshalJSON() ([]byte, error) {
+	return json.Marshal(op.Value())
+} 
+          

@@ -3,7 +3,7 @@ package models
 
 // UserPassword represents a UserPassword model.
 type UserPassword struct {
-  ReservedType *UserPasswordType
-  Description string
-  AdditionalProperties map[string]interface{}
+  ReservedType *UserPasswordType `json:"type"`
+  Description string `json:"description"`
+  AdditionalProperties map[string]interface{} `json:"-"`
 }

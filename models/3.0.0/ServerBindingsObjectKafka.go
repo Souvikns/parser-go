@@ -3,8 +3,8 @@ package models
 
 // ServerBindingsObjectKafka represents a ServerBindingsObjectKafka model.
 type ServerBindingsObjectKafka struct {
-  BindingVersion *ServerBindingsObjectKafkaBindingVersion
-  SchemaRegistryUrl string
-  SchemaRegistryVendor string
-  AdditionalProperties map[string]interface{}
+  BindingVersion *ServerBindingsObjectKafkaBindingVersion `json:"bindingVersion"`
+  SchemaRegistryUrl string `json:"schemaRegistryUrl"`
+  SchemaRegistryVendor string `json:"schemaRegistryVendor"`
+  AdditionalProperties map[string]interface{} `json:"-"`
 }

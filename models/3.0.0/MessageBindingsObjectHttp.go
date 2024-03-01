@@ -3,8 +3,8 @@ package models
 
 // MessageBindingsObjectHttp represents a MessageBindingsObjectHttp model.
 type MessageBindingsObjectHttp struct {
-  BindingVersion *MessageBindingsObjectHttpBindingVersion
-  Headers interface{}
-  StatusCode float64
-  AdditionalProperties map[string]interface{}
+  BindingVersion *MessageBindingsObjectHttpBindingVersion `json:"bindingVersion"`
+  Headers interface{} `json:"headers"`
+  StatusCode float64 `json:"statusCode"`
+  AdditionalProperties map[string]interface{} `json:"-"`
 }

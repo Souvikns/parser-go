@@ -1,6 +1,8 @@
 
 package models
-
+import (  
+  "encoding/json"
+)
 // BindingsMinusSolaceMinus_0Dot_4Dot_0MinusOperationDestinationsItemOneOf_0QueueAccessType represents an enum of BindingsMinusSolaceMinus_0Dot_4Dot_0MinusOperationDestinationsItemOneOf_0QueueAccessType.
 type BindingsMinusSolaceMinus_0Dot_4Dot_0MinusOperationDestinationsItemOneOf_0QueueAccessType uint
 
@@ -22,3 +24,19 @@ var ValuesToBindingsMinusSolaceMinus_0Dot_4Dot_0MinusOperationDestinationsItemOn
   BindingsMinusSolaceMinus_0Dot_4Dot_0MinusOperationDestinationsItemOneOf_0QueueAccessTypeValues[BindingsMinusSolaceMinus_0Dot_4Dot_0MinusOperationDestinationsItemOneOf_0QueueAccessTypeExclusive]: BindingsMinusSolaceMinus_0Dot_4Dot_0MinusOperationDestinationsItemOneOf_0QueueAccessTypeExclusive,
   BindingsMinusSolaceMinus_0Dot_4Dot_0MinusOperationDestinationsItemOneOf_0QueueAccessTypeValues[BindingsMinusSolaceMinus_0Dot_4Dot_0MinusOperationDestinationsItemOneOf_0QueueAccessTypeNonexclusive]: BindingsMinusSolaceMinus_0Dot_4Dot_0MinusOperationDestinationsItemOneOf_0QueueAccessTypeNonexclusive,
 }
+
+ 
+          
+func (op *BindingsMinusSolaceMinus_0Dot_4Dot_0MinusOperationDestinationsItemOneOf_0QueueAccessType) UnmarshalJSON(raw []byte) error {
+	var v any
+	if err := json.Unmarshal(raw, &v); err != nil {
+		return err
+	}
+	*op = ValuesToBindingsMinusSolaceMinus_0Dot_4Dot_0MinusOperationDestinationsItemOneOf_0QueueAccessType[v]
+	return nil
+}
+
+func (op BindingsMinusSolaceMinus_0Dot_4Dot_0MinusOperationDestinationsItemOneOf_0QueueAccessType) MarshalJSON() ([]byte, error) {
+	return json.Marshal(op.Value())
+} 
+          

@@ -3,9 +3,9 @@ package models
 
 // Oauth2Flows represents a Oauth2Flows model.
 type Oauth2Flows struct {
-  ReservedType *Oauth2FlowsType
-  Description string
-  Flows *Oauth2FlowsFlows
-  Scopes []string
-  AdditionalProperties map[string]interface{}
+  ReservedType *Oauth2FlowsType `json:"type"`
+  Description string `json:"description"`
+  Flows *Oauth2FlowsFlows `json:"flows"`
+  Scopes []string `json:"scopes"`
+  AdditionalProperties map[string]interface{} `json:"-"`
 }

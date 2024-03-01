@@ -1,6 +1,8 @@
 
 package models
-
+import (  
+  "encoding/json"
+)
 // PrimitiveType represents an enum of PrimitiveType.
 type PrimitiveType uint
 
@@ -34,3 +36,19 @@ var ValuesToPrimitiveType = map[any]PrimitiveType{
   PrimitiveTypeValues[PrimitiveTypeBytes]: PrimitiveTypeBytes,
   PrimitiveTypeValues[PrimitiveTypeString]: PrimitiveTypeString,
 }
+
+ 
+          
+func (op *PrimitiveType) UnmarshalJSON(raw []byte) error {
+	var v any
+	if err := json.Unmarshal(raw, &v); err != nil {
+		return err
+	}
+	*op = ValuesToPrimitiveType[v]
+	return nil
+}
+
+func (op PrimitiveType) MarshalJSON() ([]byte, error) {
+	return json.Marshal(op.Value())
+} 
+          

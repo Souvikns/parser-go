@@ -3,24 +3,24 @@ package models
 
 // Components represents a Components model.
 type Components struct {
-  Schemas map[string]interface{}
-  Servers map[string]interface{}
-  Channels map[string]interface{}
-  ServerVariables map[string]interface{}
-  Operations map[string]interface{}
-  Messages map[string]interface{}
-  SecuritySchemes map[string]interface{}
-  Parameters map[string]interface{}
-  CorrelationIds map[string]interface{}
-  OperationTraits map[string]interface{}
-  MessageTraits map[string]interface{}
-  Replies map[string]interface{}
-  ReplyAddresses map[string]interface{}
-  ServerBindings map[string]interface{}
-  ChannelBindings map[string]interface{}
-  OperationBindings map[string]interface{}
-  MessageBindings map[string]interface{}
-  Tags map[string]interface{}
-  ExternalDocs map[string]interface{}
-  AdditionalProperties map[string]interface{}
+  Schemas map[string]interface{} `json:"schemas"`
+  Servers map[string]interface{} `json:"servers"`
+  Channels map[string]interface{} `json:"channels"`
+  ServerVariables map[string]interface{} `json:"serverVariables"`
+  Operations map[string]interface{} `json:"operations"`
+  Messages map[string]interface{} `json:"messages"`
+  SecuritySchemes map[string]interface{} `json:"securitySchemes"`
+  Parameters map[string]interface{} `json:"parameters"`
+  CorrelationIds map[string]interface{} `json:"correlationIds"`
+  OperationTraits map[string]interface{} `json:"operationTraits"`
+  MessageTraits map[string]interface{} `json:"messageTraits"`
+  Replies map[string]interface{} `json:"replies"`
+  ReplyAddresses map[string]interface{} `json:"replyAddresses"`
+  ServerBindings map[string]interface{} `json:"serverBindings"`
+  ChannelBindings map[string]interface{} `json:"channelBindings"`
+  OperationBindings map[string]interface{} `json:"operationBindings"`
+  MessageBindings map[string]interface{} `json:"messageBindings"`
+  Tags map[string]interface{} `json:"tags"`
+  ExternalDocs map[string]interface{} `json:"externalDocs"`
+  AdditionalProperties map[string]interface{} `json:"-"`
 }

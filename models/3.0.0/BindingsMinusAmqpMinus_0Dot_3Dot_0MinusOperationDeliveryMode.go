@@ -1,6 +1,8 @@
 
 package models
-
+import (  
+  "encoding/json"
+)
 // BindingsMinusAmqpMinus_0Dot_3Dot_0MinusOperationDeliveryMode represents an enum of BindingsMinusAmqpMinus_0Dot_3Dot_0MinusOperationDeliveryMode.
 type BindingsMinusAmqpMinus_0Dot_3Dot_0MinusOperationDeliveryMode uint
 
@@ -22,3 +24,19 @@ var ValuesToBindingsMinusAmqpMinus_0Dot_3Dot_0MinusOperationDeliveryMode = map[a
   BindingsMinusAmqpMinus_0Dot_3Dot_0MinusOperationDeliveryModeValues[BindingsMinusAmqpMinus_0Dot_3Dot_0MinusOperationDeliveryModeNumber_1]: BindingsMinusAmqpMinus_0Dot_3Dot_0MinusOperationDeliveryModeNumber_1,
   BindingsMinusAmqpMinus_0Dot_3Dot_0MinusOperationDeliveryModeValues[BindingsMinusAmqpMinus_0Dot_3Dot_0MinusOperationDeliveryModeNumber_2]: BindingsMinusAmqpMinus_0Dot_3Dot_0MinusOperationDeliveryModeNumber_2,
 }
+
+ 
+          
+func (op *BindingsMinusAmqpMinus_0Dot_3Dot_0MinusOperationDeliveryMode) UnmarshalJSON(raw []byte) error {
+	var v any
+	if err := json.Unmarshal(raw, &v); err != nil {
+		return err
+	}
+	*op = ValuesToBindingsMinusAmqpMinus_0Dot_3Dot_0MinusOperationDeliveryMode[v]
+	return nil
+}
+
+func (op BindingsMinusAmqpMinus_0Dot_3Dot_0MinusOperationDeliveryMode) MarshalJSON() ([]byte, error) {
+	return json.Marshal(op.Value())
+} 
+          

@@ -1,6 +1,8 @@
 
 package models
-
+import (  
+  "encoding/json"
+)
 // OperationBindingsObjectHttpBindingVersion represents an enum of OperationBindingsObjectHttpBindingVersion.
 type OperationBindingsObjectHttpBindingVersion uint
 
@@ -22,3 +24,19 @@ var ValuesToOperationBindingsObjectHttpBindingVersion = map[any]OperationBinding
   OperationBindingsObjectHttpBindingVersionValues[OperationBindingsObjectHttpBindingVersionNumber_0Dot_2Dot_0]: OperationBindingsObjectHttpBindingVersionNumber_0Dot_2Dot_0,
   OperationBindingsObjectHttpBindingVersionValues[OperationBindingsObjectHttpBindingVersionNumber_0Dot_3Dot_0]: OperationBindingsObjectHttpBindingVersionNumber_0Dot_3Dot_0,
 }
+
+ 
+          
+func (op *OperationBindingsObjectHttpBindingVersion) UnmarshalJSON(raw []byte) error {
+	var v any
+	if err := json.Unmarshal(raw, &v); err != nil {
+		return err
+	}
+	*op = ValuesToOperationBindingsObjectHttpBindingVersion[v]
+	return nil
+}
+
+func (op OperationBindingsObjectHttpBindingVersion) MarshalJSON() ([]byte, error) {
+	return json.Marshal(op.Value())
+} 
+          

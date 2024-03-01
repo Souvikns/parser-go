@@ -3,9 +3,9 @@ package models
 
 // Oauth2FlowsFlowsAuthorizationCode represents a Oauth2FlowsFlowsAuthorizationCode model.
 type Oauth2FlowsFlowsAuthorizationCode struct {
-  AuthorizationUrl string
-  TokenUrl string
-  RefreshUrl string
-  AvailableScopes map[string]string
-  AdditionalProperties map[string]interface{}
+  AuthorizationUrl string `json:"authorizationUrl"`
+  TokenUrl string `json:"tokenUrl"`
+  RefreshUrl string `json:"refreshUrl"`
+  AvailableScopes map[string]string `json:"availableScopes"`
+  AdditionalProperties map[string]interface{} `json:"-"`
 }

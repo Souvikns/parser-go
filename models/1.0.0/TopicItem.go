@@ -3,9 +3,9 @@ package models
 
 // TopicItem represents a TopicItem model.
 type TopicItem struct {
-  Ref string
-  Publish *Message
-  Subscribe *Message
-  Deprecated bool
-  AdditionalProperties map[string]interface{}
+  Ref string `json:$ref`
+  Publish *Message `json:publish`
+  Subscribe *Message `json:subscribe`
+  Deprecated bool `json:deprecated`
+  AdditionalProperties map[string]interface{} `json:additionalProperties`
 }

@@ -3,11 +3,11 @@ package models
 
 // ChannelItem represents a ChannelItem model.
 type ChannelItem struct {
-  Ref string
-  Parameters map[string]interface{}
-  Publish *Operation
-  Subscribe *Operation
-  Deprecated bool
-  ProtocolInfo map[string]map[string]interface{}
-  AdditionalProperties map[string]interface{}
+  Ref string `json:$ref`
+  Parameters map[string]interface{} `json:parameters`
+  Publish *Operation `json:publish`
+  Subscribe *Operation `json:subscribe`
+  Deprecated bool `json:deprecated`
+  ProtocolInfo map[string]map[string]interface{} `json:protocolInfo`
+  AdditionalProperties map[string]interface{} `json:additionalProperties`
 }

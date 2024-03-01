@@ -1,6 +1,8 @@
 
 package models
-
+import (  
+  "encoding/json"
+)
 // MultiFormatSchemaElseSchemaFormatAnyOf_1 represents an enum of MultiFormatSchemaElseSchemaFormatAnyOf_1.
 type MultiFormatSchemaElseSchemaFormatAnyOf_1 uint
 
@@ -28,3 +30,19 @@ var ValuesToMultiFormatSchemaElseSchemaFormatAnyOf_1 = map[any]MultiFormatSchema
   MultiFormatSchemaElseSchemaFormatAnyOf_1Values[MultiFormatSchemaElseSchemaFormatAnyOf_1ApplicationSlashVndDotAaiDotAsyncapiPlusJsonSemicolonVersionEqual_3Dot_0Dot_0]: MultiFormatSchemaElseSchemaFormatAnyOf_1ApplicationSlashVndDotAaiDotAsyncapiPlusJsonSemicolonVersionEqual_3Dot_0Dot_0,
   MultiFormatSchemaElseSchemaFormatAnyOf_1Values[MultiFormatSchemaElseSchemaFormatAnyOf_1ApplicationSlashVndDotAaiDotAsyncapiPlusYamlSemicolonVersionEqual_3Dot_0Dot_0]: MultiFormatSchemaElseSchemaFormatAnyOf_1ApplicationSlashVndDotAaiDotAsyncapiPlusYamlSemicolonVersionEqual_3Dot_0Dot_0,
 }
+
+ 
+          
+func (op *MultiFormatSchemaElseSchemaFormatAnyOf_1) UnmarshalJSON(raw []byte) error {
+	var v any
+	if err := json.Unmarshal(raw, &v); err != nil {
+		return err
+	}
+	*op = ValuesToMultiFormatSchemaElseSchemaFormatAnyOf_1[v]
+	return nil
+}
+
+func (op MultiFormatSchemaElseSchemaFormatAnyOf_1) MarshalJSON() ([]byte, error) {
+	return json.Marshal(op.Value())
+} 
+          

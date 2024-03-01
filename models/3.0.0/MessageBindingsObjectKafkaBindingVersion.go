@@ -1,6 +1,8 @@
 
 package models
-
+import (  
+  "encoding/json"
+)
 // MessageBindingsObjectKafkaBindingVersion represents an enum of MessageBindingsObjectKafkaBindingVersion.
 type MessageBindingsObjectKafkaBindingVersion uint
 
@@ -22,3 +24,19 @@ var ValuesToMessageBindingsObjectKafkaBindingVersion = map[any]MessageBindingsOb
   MessageBindingsObjectKafkaBindingVersionValues[MessageBindingsObjectKafkaBindingVersionNumber_0Dot_4Dot_0]: MessageBindingsObjectKafkaBindingVersionNumber_0Dot_4Dot_0,
   MessageBindingsObjectKafkaBindingVersionValues[MessageBindingsObjectKafkaBindingVersionNumber_0Dot_3Dot_0]: MessageBindingsObjectKafkaBindingVersionNumber_0Dot_3Dot_0,
 }
+
+ 
+          
+func (op *MessageBindingsObjectKafkaBindingVersion) UnmarshalJSON(raw []byte) error {
+	var v any
+	if err := json.Unmarshal(raw, &v); err != nil {
+		return err
+	}
+	*op = ValuesToMessageBindingsObjectKafkaBindingVersion[v]
+	return nil
+}
+
+func (op MessageBindingsObjectKafkaBindingVersion) MarshalJSON() ([]byte, error) {
+	return json.Marshal(op.Value())
+} 
+          

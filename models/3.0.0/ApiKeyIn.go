@@ -1,6 +1,8 @@
 
 package models
-
+import (  
+  "encoding/json"
+)
 // ApiKeyIn represents an enum of ApiKeyIn.
 type ApiKeyIn uint
 
@@ -22,3 +24,19 @@ var ValuesToApiKeyIn = map[any]ApiKeyIn{
   ApiKeyInValues[ApiKeyInUser]: ApiKeyInUser,
   ApiKeyInValues[ApiKeyInPassword]: ApiKeyInPassword,
 }
+
+ 
+          
+func (op *ApiKeyIn) UnmarshalJSON(raw []byte) error {
+	var v any
+	if err := json.Unmarshal(raw, &v); err != nil {
+		return err
+	}
+	*op = ValuesToApiKeyIn[v]
+	return nil
+}
+
+func (op ApiKeyIn) MarshalJSON() ([]byte, error) {
+	return json.Marshal(op.Value())
+} 
+          

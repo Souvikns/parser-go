@@ -3,17 +3,17 @@ package models
 
 // Operation represents a Operation model.
 type Operation struct {
-  Action *OperationAction
-  Channel *Reference
-  Messages []Reference
-  Reply interface{}
-  Traits []interface{}
-  Title string
-  Summary string
-  Description string
-  Security []interface{}
-  Tags []interface{}
-  ExternalDocs interface{}
-  Bindings interface{}
-  AdditionalProperties map[string]interface{}
+  Action *OperationAction `json:"action"`
+  Channel *Reference `json:"channel"`
+  Messages []Reference `json:"messages"`
+  Reply interface{} `json:"reply"`
+  Traits []interface{} `json:"traits"`
+  Title string `json:"title"`
+  Summary string `json:"summary"`
+  Description string `json:"description"`
+  Security []interface{} `json:"security"`
+  Tags []interface{} `json:"tags"`
+  ExternalDocs interface{} `json:"externalDocs"`
+  Bindings interface{} `json:"bindings"`
+  AdditionalProperties map[string]interface{} `json:"-"`
 }

@@ -1,6 +1,8 @@
 
 package models
-
+import (  
+  "encoding/json"
+)
 // ApiKeyHttpSecuritySchemeIn represents an enum of ApiKeyHttpSecuritySchemeIn.
 type ApiKeyHttpSecuritySchemeIn uint
 
@@ -24,3 +26,19 @@ var ValuesToApiKeyHttpSecuritySchemeIn = map[any]ApiKeyHttpSecuritySchemeIn{
   ApiKeyHttpSecuritySchemeInValues[ApiKeyHttpSecuritySchemeInQuery]: ApiKeyHttpSecuritySchemeInQuery,
   ApiKeyHttpSecuritySchemeInValues[ApiKeyHttpSecuritySchemeInCookie]: ApiKeyHttpSecuritySchemeInCookie,
 }
+
+ 
+          
+func (op *ApiKeyHttpSecuritySchemeIn) UnmarshalJSON(raw []byte) error {
+	var v any
+	if err := json.Unmarshal(raw, &v); err != nil {
+		return err
+	}
+	*op = ValuesToApiKeyHttpSecuritySchemeIn[v]
+	return nil
+}
+
+func (op ApiKeyHttpSecuritySchemeIn) MarshalJSON() ([]byte, error) {
+	return json.Marshal(op.Value())
+} 
+          

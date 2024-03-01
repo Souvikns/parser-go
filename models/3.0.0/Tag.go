@@ -3,8 +3,8 @@ package models
 
 // Tag represents a Tag model.
 type Tag struct {
-  Name string
-  Description string
-  ExternalDocs interface{}
-  AdditionalProperties map[string]interface{}
+  Name string `json:"name"`
+  Description string `json:"description"`
+  ExternalDocs interface{} `json:"externalDocs"`
+  AdditionalProperties map[string]interface{} `json:"-"`
 }

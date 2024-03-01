@@ -3,57 +3,57 @@ package models
 
 // MessageOneOf_1OneOf_1PayloadObject represents a MessageOneOf_1OneOf_1PayloadObject model.
 type MessageOneOf_1OneOf_1PayloadObject struct {
-  Id string
-  Schema string
-  Ref string
-  Comment string
-  Title string
-  Description string
-  ReservedDefault interface{}
-  ReadOnly bool
-  WriteOnly bool
-  Examples []interface{}
-  MultipleOf float64
-  Maximum float64
-  ExclusiveMaximum interface{}
-  Minimum float64
-  ExclusiveMinimum interface{}
-  MaxLength int
-  MinLength int
-  Pattern string
-  AdditionalItems interface{}
-  Items interface{}
-  MaxItems int
-  MinItems int
-  UniqueItems bool
-  Contains interface{}
-  MaxProperties int
-  MinProperties int
-  Required []string
-  AdditionalProperties interface{}
-  Definitions map[string]interface{}
-  Properties map[string]interface{}
-  PatternProperties map[string]interface{}
-  Dependencies map[string]interface{}
-  PropertyNames interface{}
-  ReservedConst interface{}
-  Enum []interface{}
-  ReservedType *JsonMinusSchemaMinusDraftMinus_07MinusSchemaType
-  Format string
-  ContentMediaType string
-  ContentEncoding string
-  ReservedIf interface{}
-  Then interface{}
-  ReservedElse interface{}
-  AllOf []interface{}
-  AnyOf []interface{}
-  OneOf []interface{}
-  Not interface{}
-  Discriminator interface{}
-  ExternalDocs *ExternalDocs
-  Deprecated bool
-  Nullable bool
-  Example interface{}
-  Xml *OpenapiSchema_3_0Xml
-  ReservedAdditionalProperties map[string]interface{}
+  Id string `json:$id`
+  Schema string `json:$schema`
+  Ref string `json:$ref`
+  Comment string `json:$comment`
+  Title string `json:title`
+  Description string `json:description`
+  ReservedDefault interface{} `json:default`
+  ReadOnly bool `json:readOnly`
+  WriteOnly bool `json:writeOnly`
+  Examples []interface{} `json:examples`
+  MultipleOf float64 `json:multipleOf`
+  Maximum float64 `json:maximum`
+  ExclusiveMaximum interface{} `json:exclusiveMaximum`
+  Minimum float64 `json:minimum`
+  ExclusiveMinimum interface{} `json:exclusiveMinimum`
+  MaxLength int `json:maxLength`
+  MinLength int `json:minLength`
+  Pattern string `json:pattern`
+  AdditionalItems interface{} `json:additionalItems`
+  Items interface{} `json:items`
+  MaxItems int `json:maxItems`
+  MinItems int `json:minItems`
+  UniqueItems bool `json:uniqueItems`
+  Contains interface{} `json:contains`
+  MaxProperties int `json:maxProperties`
+  MinProperties int `json:minProperties`
+  Required []string `json:required`
+  AdditionalProperties interface{} `json:additionalProperties`
+  Definitions map[string]interface{} `json:definitions`
+  Properties map[string]interface{} `json:properties`
+  PatternProperties map[string]interface{} `json:patternProperties`
+  Dependencies map[string]interface{} `json:dependencies`
+  PropertyNames interface{} `json:propertyNames`
+  ReservedConst interface{} `json:const`
+  Enum []interface{} `json:enum`
+  ReservedType *JsonMinusSchemaMinusDraftMinus_07MinusSchemaType `json:type`
+  Format string `json:format`
+  ContentMediaType string `json:contentMediaType`
+  ContentEncoding string `json:contentEncoding`
+  ReservedIf interface{} `json:if`
+  Then interface{} `json:then`
+  ReservedElse interface{} `json:else`
+  AllOf []interface{} `json:allOf`
+  AnyOf []interface{} `json:anyOf`
+  OneOf []interface{} `json:oneOf`
+  Not interface{} `json:not`
+  Discriminator interface{} `json:discriminator`
+  ExternalDocs *ExternalDocs `json:externalDocs`
+  Deprecated bool `json:deprecated`
+  Nullable bool `json:nullable`
+  Example interface{} `json:example`
+  Xml *OpenapiSchema_3_0Xml `json:xml`
+  ReservedAdditionalProperties map[string]interface{} `json:reserved_additionalProperties`
 }

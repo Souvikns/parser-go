@@ -3,22 +3,22 @@ package models
 
 // ChannelBindingsObject represents a ChannelBindingsObject model.
 type ChannelBindingsObject struct {
-  Http interface{}
-  Ws *ChannelBindingsObjectWs
-  Amqp *ChannelBindingsObjectAmqp
-  Amqp1 interface{}
-  Mqtt interface{}
-  Kafka *ChannelBindingsObjectKafka
-  Anypointmq *ChannelBindingsObjectAnypointmq
-  Nats interface{}
-  Jms *ChannelBindingsObjectJms
-  Sns *ChannelBindingsObjectSns
-  Sqs *ChannelBindingsObjectSqs
-  Stomp interface{}
-  Redis interface{}
-  Ibmmq *ChannelBindingsObjectIbmmq
-  Solace interface{}
-  Googlepubsub *ChannelBindingsObjectGooglepubsub
-  Pulsar *ChannelBindingsObjectPulsar
-  AdditionalProperties map[string]interface{}
+  Http interface{} `json:"http"`
+  Ws *ChannelBindingsObjectWs `json:"ws"`
+  Amqp *ChannelBindingsObjectAmqp `json:"amqp"`
+  Amqp1 interface{} `json:"amqp1"`
+  Mqtt interface{} `json:"mqtt"`
+  Kafka *ChannelBindingsObjectKafka `json:"kafka"`
+  Anypointmq *ChannelBindingsObjectAnypointmq `json:"anypointmq"`
+  Nats interface{} `json:"nats"`
+  Jms *ChannelBindingsObjectJms `json:"jms"`
+  Sns *ChannelBindingsObjectSns `json:"sns"`
+  Sqs *ChannelBindingsObjectSqs `json:"sqs"`
+  Stomp interface{} `json:"stomp"`
+  Redis interface{} `json:"redis"`
+  Ibmmq *ChannelBindingsObjectIbmmq `json:"ibmmq"`
+  Solace interface{} `json:"solace"`
+  Googlepubsub *ChannelBindingsObjectGooglepubsub `json:"googlepubsub"`
+  Pulsar *ChannelBindingsObjectPulsar `json:"pulsar"`
+  AdditionalProperties map[string]interface{} `json:"-"`
 }
