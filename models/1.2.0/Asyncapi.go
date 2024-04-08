@@ -1,6 +1,8 @@
 
 package models
-
+import (  
+  "encoding/json"
+)
 // Asyncapi represents an enum of Asyncapi.
 type Asyncapi uint
 
@@ -23,4 +25,18 @@ var ValuesToAsyncapi = map[any]Asyncapi{
   AsyncapiValues[AsyncapiNumber_1Dot_0Dot_0]: AsyncapiNumber_1Dot_0Dot_0,
   AsyncapiValues[AsyncapiNumber_1Dot_1Dot_0]: AsyncapiNumber_1Dot_1Dot_0,
   AsyncapiValues[AsyncapiNumber_1Dot_2Dot_0]: AsyncapiNumber_1Dot_2Dot_0,
+}
+
+ 
+func (op *Asyncapi) UnmarshalJSON(raw []byte) error {
+  var v any
+  if err := json.Unmarshal(raw, &v); err != nil {
+  return err
+  }
+  *op = ValuesToAsyncapi[v]
+  return nil
+}
+
+func (op Asyncapi) MarshalJSON() ([]byte, error) {
+  return json.Marshal(op.Value())
 }

@@ -8,6 +8,6 @@ type Array struct {
   Namespace string `json:"namespace"`
   Doc string `json:"doc"`
   Aliases []string `json:"aliases"`
-  Items interface{} `json:"items"`
+  Items *AvroTypes `json:"items"`
   AdditionalProperties map[string]interface{} `json:"-"`
 }

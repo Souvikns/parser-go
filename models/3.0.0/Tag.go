@@ -5,6 +5,6 @@ package models
 type Tag struct {
   Name string `json:"name"`
   Description string `json:"description"`
-  ExternalDocs interface{} `json:"externalDocs"`
+  ExternalDocs *TagExternalDocs `json:"externalDocs"`
   AdditionalProperties map[string]interface{} `json:"-"`
 }

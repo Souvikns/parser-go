@@ -10,10 +10,10 @@ type Server struct {
   Description string `json:"description"`
   Protocol string `json:"protocol"`
   ProtocolVersion string `json:"protocolVersion"`
-  Variables map[string]interface{} `json:"variables"`
-  Security []interface{} `json:"security"`
-  Tags []interface{} `json:"tags"`
-  ExternalDocs interface{} `json:"externalDocs"`
-  Bindings interface{} `json:"bindings"`
+  Variables map[string]ServerVariablesAdditionalProperty `json:"variables"`
+  Security []SecurityRequirementsItem `json:"security"`
+  Tags []ServerTagsItem `json:"tags"`
+  ExternalDocs *ServerExternalDocs `json:"externalDocs"`
+  Bindings *ServerBindings `json:"bindings"`
   AdditionalProperties map[string]interface{} `json:"-"`
 }

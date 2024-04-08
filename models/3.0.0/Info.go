@@ -9,7 +9,7 @@ type Info struct {
   TermsOfService string `json:"termsOfService"`
   Contact *Contact `json:"contact"`
   License *License `json:"license"`
-  Tags []interface{} `json:"tags"`
-  ExternalDocs interface{} `json:"externalDocs"`
+  Tags []InfoTagsItem `json:"tags"`
+  ExternalDocs *InfoExternalDocs `json:"externalDocs"`
   AdditionalProperties map[string]interface{} `json:"-"`
 }
