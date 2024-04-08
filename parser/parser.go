@@ -2,15 +2,13 @@ package parser
 
 import (
 	"errors"
-	AsyncApi_2Dot_6Dot_0SchemaDot "github.com/Souvikns/parser-go/models/2.6.0"
-	AsyncApi_3Dot_0Dot_0SchemaDot "github.com/Souvikns/parser-go/models/3.0.0"
 	"github.com/Souvikns/parser-go/scheme"
 	"io"
 	"net/http"
 	"os"
 )
 
-func Parse[K AsyncApi_3Dot_0Dot_0SchemaDot.AsyncApi_3Dot_0Dot_0SchemaDot | AsyncApi_2Dot_6Dot_0SchemaDot.AsyncApi_2Dot_6Dot_0SchemaDot](document string, obj *K) error {
+func Parse[K Asyncapi_3_0_0 | Asyncapi_2_6_0 | Asyncapi_2_5_0 | Asyncapi_2_4_0 | Asyncapi_2_3_0 | Asyncapi_2_2_0 | Asyncapi_2_1_0 | Asyncapi_2_0_0](document string, obj *K) error {
 	doc, err := loadDocument([]byte(document))
 	if err != nil {
 		return err
@@ -41,7 +39,7 @@ func Parse[K AsyncApi_3Dot_0Dot_0SchemaDot.AsyncApi_3Dot_0Dot_0SchemaDot | Async
 	return nil
 }
 
-func ParseFromFile[K AsyncApi_3Dot_0Dot_0SchemaDot.AsyncApi_3Dot_0Dot_0SchemaDot | AsyncApi_2Dot_6Dot_0SchemaDot.AsyncApi_2Dot_6Dot_0SchemaDot](filepath string, obj *K) error {
+func ParseFromFile[K Asyncapi_3_0_0 | Asyncapi_2_6_0 | Asyncapi_2_5_0 | Asyncapi_2_4_0 | Asyncapi_2_3_0 | Asyncapi_2_2_0 | Asyncapi_2_1_0 | Asyncapi_2_0_0](filepath string, obj *K) error {
 	data, err := os.ReadFile(filepath)
 	if err != nil {
 		return err
@@ -50,7 +48,7 @@ func ParseFromFile[K AsyncApi_3Dot_0Dot_0SchemaDot.AsyncApi_3Dot_0Dot_0SchemaDot
 	return nil
 }
 
-func ParseFromUrl[K AsyncApi_3Dot_0Dot_0SchemaDot.AsyncApi_3Dot_0Dot_0SchemaDot | AsyncApi_2Dot_6Dot_0SchemaDot.AsyncApi_2Dot_6Dot_0SchemaDot](url string, obj *K) error {
+func ParseFromUrlan[K Asyncapi_3_0_0 | Asyncapi_2_6_0 | Asyncapi_2_5_0 | Asyncapi_2_4_0 | Asyncapi_2_3_0 | Asyncapi_2_2_0 | Asyncapi_2_1_0 | Asyncapi_2_0_0](url string, obj *K) error {
 	response, err := http.Get(url)
 	if err != nil {
 		return err

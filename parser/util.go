@@ -3,8 +3,6 @@ package parser
 import (
 	"encoding/json"
 	"errors"
-	AsyncApi_2Dot_6Dot_0SchemaDot "github.com/Souvikns/parser-go/models/2.6.0"
-	AsyncApi_3Dot_0Dot_0SchemaDot "github.com/Souvikns/parser-go/models/3.0.0"
 	"github.com/xeipuuv/gojsonschema"
 	"gopkg.in/yaml.v3"
 )
@@ -56,7 +54,7 @@ func validateSchema(definition []byte, document string) error {
 	return nil
 }
 
-func getModel[K AsyncApi_3Dot_0Dot_0SchemaDot.AsyncApi_3Dot_0Dot_0SchemaDot | AsyncApi_2Dot_6Dot_0SchemaDot.AsyncApi_2Dot_6Dot_0SchemaDot](version string, document Document, obj *K) {
+func getModel[K Asyncapi_3_0_0 | Asyncapi_2_6_0 | Asyncapi_2_5_0 | Asyncapi_2_4_0 | Asyncapi_2_3_0 | Asyncapi_2_2_0 | Asyncapi_2_1_0 | Asyncapi_2_0_0](version string, document Document, obj *K) {
 	data, _ := json.Marshal(document.Doc)
 	json.Unmarshal(data, obj)
 }
