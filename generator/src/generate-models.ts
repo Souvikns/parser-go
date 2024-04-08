@@ -2,6 +2,7 @@ import {
   GoDefaultModelNameConstraints,
   GoFileGenerator,
   ConstrainedDictionaryModel,
+  GO_COMMON_PRESET
 } from '@asyncapi/modelina'
 import * as path from 'path'
 import * as fs from 'fs'
@@ -59,45 +60,9 @@ async function defaultGenerateModels(input: FileReadType, outputDir: string) {
   if (fs.existsSync(outputDirForVersion)) {
     fs.rmSync(outputDirForVersion, { recursive: true })
   }
-  const generator = new GoFileGenerator({
-    presets: [
-      {
-        struct: {
-          field: ({ content, field }) => {
-            if (
-              field.property instanceof ConstrainedDictionaryModel &&
-              field.property.serializationType === 'unwrap'
-            ) {
-              return `${content} \`json:"-"\``
-            }
-            return `${content} \`json:"${field.unconstrainedPropertyName}"\``
-          },
-        },
-        enum: {
-          self({content,model, renderer}) {
-            renderer.dependencyManager.addDependency("encoding/json")
-                       const extraCode = `
-          
-func (op *${model.name}) UnmarshalJSON(raw []byte) error {
-	var v any
-	if err := json.Unmarshal(raw, &v); err != nil {
-		return err
-	}
-	*op = ValuesTo${model.name}[v]
-	return nil
-}
-
-func (op ${model.name}) MarshalJSON() ([]byte, error) {
-	return json.Marshal(op.Value())
-} 
-          `
-
-            return `${content}\n ${extraCode}` 
-          },
-        }
-      },
-    ],
-  })
+  const generator = new GoFileGenerator({presets: [{preset: GO_COMMON_PRESET, options: {
+    addJsonTag: true
+  }}]})
 
   await generator.generateToFiles(inputObj, outputDirForVersion, {
     packageName: 'models',
@@ -105,10 +70,10 @@ func (op ${model.name}) MarshalJSON() ([]byte, error) {
 }
 
 async function generate() {
-  // for (const file of filteredFiles) {
-  //   await defaultGenerateModels(file, outputDirPath)
-  // }
-  const f = filteredFiles[filteredFiles.length - 1]
-  await defaultGenerateModels(f, outputDirPath)
+  for (const file of filteredFiles) {
+    await defaultGenerateModels(file, outputDirPath)
+  }
+  // const f = filteredFiles[filteredFiles.length - 1]
+  // await defaultGenerateModels(f, outputDirPath)
 }
 generate().catch(e => console.log(e))
