@@ -4,6 +4,7 @@ import (
 	"errors"
 	"os"
 	"strings"
+	"path"
 )
 
 type Schema struct {
@@ -20,13 +21,15 @@ type Schemas struct {
 }
 
 func LoadSchemes() (schemas Schemas, err error) {
-	files, err := os.ReadDir("../generator/definitions/")
+	dir, _ := os.Getwd()
+	definitionFolderPath := path.Join(dir, "/generator/definitions/")
+	files, err := os.ReadDir(definitionFolderPath)
 	if err != nil {
 		return schemas, err
 	}
 
 	for _, f := range files {
-		data, err := os.ReadFile("../generator/definitions/" + f.Name())
+		data, err := os.ReadFile(definitionFolderPath + "/" + f.Name())
 		if err != nil {
 			return schemas, err
 		}

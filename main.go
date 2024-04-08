@@ -1,22 +1,23 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
-	"github.com/Souvikns/parser-go/models/3.0.0"
+	"log"
+
+	"github.com/Souvikns/parser-go/parser"
+	model "github.com/Souvikns/parser-go/models/3.0.0"
+	"os"
 )
 
 func main() {
-	data := `"password"`
-	var v models.ApiKeyIn
-	json.Unmarshal([]byte(data), &v)
-	fmt.Println(v.Value())
-	d , err := json.Marshal(v)
-	if err != nil {
-		fmt.Println(err)
+	spec, err := os.ReadFile(("./spec.yaml"))
+	if err !=nil {
+		log.Fatalf(err.Error())
 	}
-	fmt.Println(string(d))
-
-	var apikeyin models.ApiKeyIn = 0
-	fmt.Println(apikeyin.Value())
+	var asyncapi model.AsyncApi_3Dot_0Dot_0SchemaDot
+	err = parser.Parse(string(spec), &asyncapi)
+	if err != nil {
+		log.Fatalf(err.Error())
+	}
+	fmt.Println(asyncapi.Asyncapi)
 }

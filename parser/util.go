@@ -3,18 +3,13 @@ package parser
 import (
 	"encoding/json"
 	"errors"
-
-	// "github.com/Souvikns/parser-go/models/3.0.0"
-	// m2 "github.com/Souvikns/parser-go/models/2.6.0"
+	AsyncApi_2Dot_6Dot_0SchemaDot "github.com/Souvikns/parser-go/models/2.6.0"
+	AsyncApi_3Dot_0Dot_0SchemaDot "github.com/Souvikns/parser-go/models/3.0.0"
 	"github.com/xeipuuv/gojsonschema"
 	"gopkg.in/yaml.v3"
 )
 
 
-
-type AsyncAPIObject struct {
-	models.AsyncApi_3Dot_0Dot_0SchemaDot
-}
 
 const (
 	JsonFile = "Json"
@@ -33,10 +28,12 @@ func loadDocument(document []byte) (Document, error) {
 	if err != nil {
 		err := yaml.Unmarshal(document, &doc)
 		if err != nil {
-			return Document{Doc: doc, FileType: YamlFile, RawDoc: document}, errors.New("Invalid document: Only support json or yaml file")
+			return Document{Doc: doc, FileType: YamlFile, RawDoc: document}, errors.New("invalid document: Only support json or yaml file")
+		} else {
+			return Document{Doc: doc, FileType: YamlFile, RawDoc: document}, nil
 		}
 	}
-	return Document{Doc: doc, FileType: JsonFile, RawDoc: document}, err
+	return Document{Doc: doc, FileType: JsonFile, RawDoc: document}, nil
 }
 
 func extractVersion(v map[string]any) (string, bool) {
@@ -59,18 +56,7 @@ func validateSchema(definition []byte, document string) error {
 	return nil
 }
 
-func getModel(version string, document Document) any {
+func getModel[K AsyncApi_3Dot_0Dot_0SchemaDot.AsyncApi_3Dot_0Dot_0SchemaDot | AsyncApi_2Dot_6Dot_0SchemaDot.AsyncApi_2Dot_6Dot_0SchemaDot](version string, document Document, obj *K) {
 	data, _ := json.Marshal(document.Doc)
-	switch version {
-	case "3.0.0":
-		var m models.AsyncApi_3Dot_0Dot_0SchemaDot
-		json.Unmarshal(data, &m)
-		return m
-	case "2.6.0":
-		var m models.AsyncApi_2Dot_6Dot_0SchemaDot
-		json.Unmarshal(data, &m)
-		return m
-	}
-
-	return nil
+	json.Unmarshal(data, obj)
 }
