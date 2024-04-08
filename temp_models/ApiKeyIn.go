@@ -21,6 +21,10 @@ func (op ApiKeyIn) Value() any {
 	return ApiKeyInValues[op]
 }
 
+// func (op ApiKeyIn) Key(value string) any {
+
+// }
+
 var ApiKeyInValues = []any{"user","password"}
 var ValuesToApiKeyIn = map[any]ApiKeyIn{
   ApiKeyInValues[ApiKeyInUser]: ApiKeyInUser,

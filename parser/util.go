@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"errors"
 
-	"github.com/Souvikns/parser-go/models/3.0.0"
-	m2 "github.com/Souvikns/parser-go/models/2.6.0"
+	// "github.com/Souvikns/parser-go/models/3.0.0"
+	// m2 "github.com/Souvikns/parser-go/models/2.6.0"
 	"github.com/xeipuuv/gojsonschema"
 	"gopkg.in/yaml.v3"
 )
@@ -67,7 +67,7 @@ func getModel(version string, document Document) any {
 		json.Unmarshal(data, &m)
 		return m
 	case "2.6.0":
-		var m m2.AsyncApi_2Dot_6Dot_0SchemaDot
+		var m models.AsyncApi_2Dot_6Dot_0SchemaDot
 		json.Unmarshal(data, &m)
 		return m
 	}

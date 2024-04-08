@@ -45,9 +45,9 @@ type AnySchemaObject struct {
   ReservedIf interface{} `json:"if"`
   Then interface{} `json:"then"`
   ReservedElse interface{} `json:"else"`
-  AllOf [] `json:"allOf"`
-  AnyOf [] `json:"anyOf"`
-  OneOf [] `json:"oneOf"`
+  AllOf any `json:"allOf"`
+  AnyOf any `json:"anyOf"`
+  OneOf any `json:"oneOf"`
   Not interface{} `json:"not"`
   Discriminator string `json:"discriminator"`
   ExternalDocs interface{} `json:"externalDocs"`

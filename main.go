@@ -17,4 +17,6 @@ func main() {
 	}
 	fmt.Println(string(d))
 
+	var apikeyin models.ApiKeyIn = 0
+	fmt.Println(apikeyin.Value())
 }
