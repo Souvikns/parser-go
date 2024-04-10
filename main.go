@@ -12,5 +12,5 @@ func main() {
 	if err != nil {
 		log.Fatalf(err.Error())
 	}
-	fmt.Println(asyncapi.Asyncapi)
+	fmt.Println(asyncapi.Channels["userSignedUp"].Address)
 }
