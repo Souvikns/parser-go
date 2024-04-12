@@ -5,7 +5,7 @@ info:
   description: This service is in charge of processing user signups
 servers:
   mosquitto:
-    hosts: test.mosquitto.org
+    host: test.mosquitto.org
     protocol: mqtts
     security:
       - $ref: '#/components/securitySchemes/X509Certificate'
@@ -108,7 +108,7 @@ components:
             format: date-time
     ServerAnnounce:
       payload:
-        types: object
+        type: object
         additionalProperties: false
         required:
           - id
