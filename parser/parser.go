@@ -44,7 +44,10 @@ func ParseFromFile[K Asyncapi_3_0_0 | Asyncapi_2_6_0 | Asyncapi_2_5_0 | Asyncapi
 	if err != nil {
 		return err
 	}
-	Parse(string(data), obj)
+	err = Parse(string(data), obj)
+	if err !=nil {
+		return err
+	}
 	return nil
 }
 
@@ -58,6 +61,9 @@ func ParseFromUrlan[K Asyncapi_3_0_0 | Asyncapi_2_6_0 | Asyncapi_2_5_0 | Asyncap
 	if err != nil {
 		return err
 	}
-	Parse(string(body), obj)
+	err = Parse(string(body), obj)
+	if err != nil {
+		return err
+	}
 	return nil
 }

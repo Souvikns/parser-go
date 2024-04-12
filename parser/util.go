@@ -5,6 +5,7 @@ import (
 	"errors"
 	"github.com/xeipuuv/gojsonschema"
 	"gopkg.in/yaml.v3"
+	parseError "github.com/Souvikns/parser-go/error"
 )
 
 
@@ -48,7 +49,11 @@ func validateSchema(definition []byte, document string) error {
 	}
 
 	if !result.Valid() {
-
+		var errs []error
+		for _, err := range result.Errors() {
+			errs = append(errs, errors.New(err.String()))
+		}
+		return parseError.New(errs...)
 	}
 
 	return nil
