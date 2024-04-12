@@ -3,8 +3,8 @@ package scheme
 import (
 	"errors"
 	"os"
-	"strings"
 	"path"
+	"strings"
 )
 
 type Schema struct {
