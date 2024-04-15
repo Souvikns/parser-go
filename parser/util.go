@@ -3,6 +3,8 @@ package parser
 import (
 	"encoding/json"
 	"errors"
+
+	parseError "github.com/Souvikns/parser-go/error"
 	"github.com/xeipuuv/gojsonschema"
 	"gopkg.in/yaml.v3"
 )
@@ -39,7 +41,7 @@ func extractVersion(v map[string]any) (string, bool) {
 	return version.(string), err
 }
 
-func validateSchema(definition []byte, document string) error {
+func validateSchema(definition []byte, document any) error {
 	schemaLoader := gojsonschema.NewBytesLoader(definition)
 	documentLoader := gojsonschema.NewGoLoader(document)
 	result, err := gojsonschema.Validate(schemaLoader, documentLoader)
@@ -48,7 +50,11 @@ func validateSchema(definition []byte, document string) error {
 	}
 
 	if !result.Valid() {
-
+		var errs []error
+		for _, err := range result.Errors() {
+			errs = append(errs, errors.New(err.String()))
+		}
+		return parseError.New(errs...)
 	}
 
 	return nil
