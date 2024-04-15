@@ -2,10 +2,11 @@ package parser
 
 import (
 	"errors"
-	"github.com/Souvikns/parser-go/scheme"
 	"io"
 	"net/http"
 	"os"
+
+	"github.com/Souvikns/parser-go/scheme"
 )
 
 func Parse[K Asyncapi_3_0_0 | Asyncapi_2_6_0 | Asyncapi_2_5_0 | Asyncapi_2_4_0 | Asyncapi_2_3_0 | Asyncapi_2_2_0 | Asyncapi_2_1_0 | Asyncapi_2_0_0](document string, obj *K) error {
@@ -30,7 +31,7 @@ func Parse[K Asyncapi_3_0_0 | Asyncapi_2_6_0 | Asyncapi_2_5_0 | Asyncapi_2_4_0 |
 		return err
 	}
 
-	err = validateSchema(schema.Definition, document)
+	err = validateSchema(schema.Definition, doc.Doc)
 	if err != nil {
 		return err
 	}
