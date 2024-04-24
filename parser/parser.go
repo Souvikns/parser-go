@@ -5,8 +5,7 @@ import (
 	"io"
 	"net/http"
 	"os"
-
-	"github.com/Souvikns/parser-go/scheme"
+	schemes "github.com/asyncapi/spec-json-schemas/v6"
 )
 
 func Parse[K Asyncapi_3_0_0 | Asyncapi_2_6_0 | Asyncapi_2_5_0 | Asyncapi_2_4_0 | Asyncapi_2_3_0 | Asyncapi_2_2_0 | Asyncapi_2_1_0 | Asyncapi_2_0_0](document string, obj *K) error {
@@ -19,19 +18,12 @@ func Parse[K Asyncapi_3_0_0 | Asyncapi_2_6_0 | Asyncapi_2_5_0 | Asyncapi_2_4_0 |
 		return errors.New("missing asyncapi property")
 	}
 
-	// load correct scheme according to the version of the asyncapi document
-	// if the document has not errors then create the appropriate model generated from the document
-	// and return it.
-	schemes, err := scheme.LoadSchemes()
-	if err != nil {
-		return err
-	}
 	schema, err := schemes.Get(version)
 	if err != nil {
 		return err
 	}
 
-	err = validateSchema(schema.Definition, doc.Doc)
+	err = validateSchema(schema, doc.Doc)
 	if err != nil {
 		return err
 	}

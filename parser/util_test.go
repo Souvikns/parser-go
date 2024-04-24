@@ -2,9 +2,8 @@ package parser
 
 import (
 	"testing"
-
-	"github.com/Souvikns/parser-go/scheme"
 	"github.com/stretchr/testify/assert"
+	schemes "github.com/asyncapi/spec-json-schemas/v6"
 )
 
 const Spec = `
@@ -208,10 +207,10 @@ func TestExtractVersion(t *testing.T) {
 
 func TestValidateScheme(t *testing.T) {
 	doc, _ := loadDocument([]byte(Spec))
-	version, _ := extractVersion(doc.Doc)
-	schemes, e := scheme.LoadSchemes()
-	assert.Nil(t, e)
+	assert.NotNil(t, doc)
+	version, found := extractVersion(doc.Doc)
+	assert.True(t, found)
 	schema, _ := schemes.Get(version)
-	err := validateSchema(schema.Definition, Spec)
+	err := validateSchema(schema, doc.Doc)
 	assert.Nil(t, err)
 }
