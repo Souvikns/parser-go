@@ -1,3 +1,9 @@
+github.com/asyncapi/spec-json-schemas/v2 v2.14.0 h1:t5Frb4WzaV2bTlcRqXhBdvqTjO6+n/oiPMjvCxYooag=
+github.com/asyncapi/spec-json-schemas/v2 v2.14.0/go.mod h1:5lFCFtRGfI3WVOla4slifjgPs9x79FY0fqZjgNL495c=
+github.com/asyncapi/spec-json-schemas/v4 v4.3.1 h1:qW1bdPccOsRB6f1pHp2effEWbYwvCAzS74PX8akP7ek=
+github.com/asyncapi/spec-json-schemas/v4 v4.3.1/go.mod h1:O3sbFRO3Opn4eNHBa7urVUbFPJ738FYgAQ5yQO1+jzs=
+github.com/asyncapi/spec-json-schemas/v6 v6.6.0 h1:IzpoO8ZZR9p4sFDXBmpsSk8W4UC66h77XLENQqGesS0=
+github.com/asyncapi/spec-json-schemas/v6 v6.6.0/go.mod h1:Prt1yOLf1b47zpGTyllyMVHAmLF6iq1p5mChVwa1uLY=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=

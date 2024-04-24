@@ -135,3 +135,11 @@ func TestParse(t *testing.T) {
   }
 	assert.Nil(t, err)
 }
+
+func TestParseFromFile(t *testing.T) {
+  var asyncapi Asyncapi_3_0_0
+  err := ParseFromFile("../spec.yaml", &asyncapi)
+  assert.Nil(t, err)
+  assert.Equal(t, asyncapi.Asyncapi, "3.0.0")
+}
+
