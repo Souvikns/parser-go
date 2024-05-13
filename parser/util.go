@@ -7,6 +7,7 @@ import (
 	parseError "github.com/Souvikns/parser-go/error"
 	"github.com/xeipuuv/gojsonschema"
 	"gopkg.in/yaml.v3"
+
 )
 
 
@@ -22,7 +23,7 @@ type Document struct {
 	RawDoc   []byte
 }
 
-func loadDocument(document []byte) (Document, error) {
+func LoadDocument(document []byte) (Document, error) {
 	doc := make(map[string]any)
 	err := json.Unmarshal(document, &doc)
 	if err != nil {

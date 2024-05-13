@@ -9,7 +9,7 @@ import (
 )
 
 func Parse[K Asyncapi_3_0_0 | Asyncapi_2_6_0 | Asyncapi_2_5_0 | Asyncapi_2_4_0 | Asyncapi_2_3_0 | Asyncapi_2_2_0 | Asyncapi_2_1_0 | Asyncapi_2_0_0](document string, obj *K) error {
-	doc, err := loadDocument([]byte(document))
+	doc, err := LoadDocument([]byte(document))
 	if err != nil {
 		return err
 	}

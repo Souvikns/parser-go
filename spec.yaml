@@ -61,6 +61,8 @@ operations:
     action: send
     channel:
       $ref: '#/channels/userSignedUp'
+      trait:
+        description: 'Hello'
     messages:
       - $ref: '#/channels/userSignedUp/messages/UserSignedUp'
   sendServerAnnounce:
