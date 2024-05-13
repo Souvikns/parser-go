@@ -7,7 +7,7 @@ import {
 import * as path from 'path'
 import * as fs from 'fs'
 
-const outputDirPath = path.resolve(__dirname, '../../models')
+const outputDirPath = path.resolve(__dirname, '../../pkg/models')
 const schemaFiles = path.resolve(__dirname, '../definitions')
 
 interface FileReadType {
