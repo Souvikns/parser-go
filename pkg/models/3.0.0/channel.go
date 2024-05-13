@@ -3,7 +3,7 @@ package models
 
 // Channel represents a Channel model.
 type Channel struct {
-  Address string `json:"address"`
+  Address *string `json:"address"`
   Messages map[string]ChannelMessagesAdditionalProperty `json:"messages"`
   Parameters map[string]ParametersAdditionalProperty `json:"parameters"`
   Title string `json:"title"`
