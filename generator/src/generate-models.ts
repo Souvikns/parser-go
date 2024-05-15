@@ -1,13 +1,11 @@
 import {
-  GoDefaultModelNameConstraints,
   GoFileGenerator,
-  ConstrainedDictionaryModel,
   GO_COMMON_PRESET
 } from '@asyncapi/modelina'
 import * as path from 'path'
 import * as fs from 'fs'
 
-const outputDirPath = path.resolve(__dirname, '../../models')
+const outputDirPath = path.resolve(__dirname, '../../pkg/models')
 const schemaFiles = path.resolve(__dirname, '../definitions')
 
 interface FileReadType {
@@ -28,27 +26,6 @@ const filteredFiles: FileReadType[] = fs
       asyncapiVersion: path.basename(file).replace('-without-$id.json', ''),
     }
   })
-
-async function generateModelsForV2_0() {
-  const outputDirForV2_0 = path.resolve(
-    __dirname,
-    outputDirPath,
-    'asyncapi_2_0'
-  )
-  //const input = versions['2.0.0'] as any;
-  const inputFileContent = await fs.promises.readFile(
-    path.resolve(__dirname, './asyncapi-2_0.json')
-  )
-  const input = JSON.parse(String(inputFileContent))
-  if (fs.existsSync(outputDirForV2_0)) {
-    fs.rmSync(outputDirForV2_0, { recursive: true })
-  }
-  const generator = new GoFileGenerator({})
-
-  await generator.generateToFiles(input, outputDirForV2_0, {
-    packageName: 'models',
-  })
-}
 
 async function defaultGenerateModels(input: FileReadType, outputDir: string) {
   const inputObj = JSON.parse(String(input.fileContent))
