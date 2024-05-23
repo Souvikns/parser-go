@@ -3,8 +3,8 @@ package models
 
 // Components represents a Components model.
 type Components struct {
-  Schemas map[string]Schema `json:"schemas"`
-  Messages map[string]Message `json:"messages"`
-  SecuritySchemes map[string]ComponentsSecuritySchemes `json:"securitySchemes"`
-  Parameters map[string]Parameter `json:"parameters"`
+  Schemas map[string]Schema `json:"schemas,omitempty"`
+  Messages map[string]Message `json:"messages,omitempty"`
+  SecuritySchemes map[string]ComponentsSecuritySchemes `json:"securitySchemes,omitempty"`
+  Parameters map[string]Parameter `json:"parameters,omitempty"`
 }

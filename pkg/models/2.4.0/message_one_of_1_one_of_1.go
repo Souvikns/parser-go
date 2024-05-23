@@ -3,21 +3,21 @@ package models
 
 // MessageOneOf_1OneOf_1 represents a MessageOneOf_1OneOf_1 model.
 type MessageOneOf_1OneOf_1 struct {
-  SchemaFormat string `json:"schemaFormat"`
-  ContentType string `json:"contentType"`
-  Headers *MessageOneOf_1OneOf_1Headers `json:"headers"`
-  MessageId string `json:"messageId"`
-  Payload *MessageOneOf_1OneOf_1Payload `json:"payload"`
-  CorrelationId *MessageOneOf_1OneOf_1CorrelationId `json:"correlationId"`
-  Tags []Tag `json:"tags"`
-  Summary string `json:"summary"`
-  Name string `json:"name"`
-  Title string `json:"title"`
-  Description string `json:"description"`
-  ExternalDocs *ExternalDocs `json:"externalDocs"`
-  Deprecated bool `json:"deprecated"`
-  Examples []MessageOneOf_1OneOf_1ExamplesItem `json:"examples"`
-  Bindings *BindingsObject `json:"bindings"`
-  Traits []MessageOneOf_1OneOf_1TraitsItem `json:"traits"`
-  AdditionalProperties map[string]interface{} `json:"-"`
+  SchemaFormat string `json:"schemaFormat,omitempty"`
+  ContentType string `json:"contentType,omitempty"`
+  Headers *MessageOneOf_1OneOf_1Headers `json:"headers,omitempty"`
+  MessageId string `json:"messageId,omitempty"`
+  Payload *MessageOneOf_1OneOf_1Payload `json:"payload,omitempty"`
+  CorrelationId *MessageOneOf_1OneOf_1CorrelationId `json:"correlationId,omitempty"`
+  Tags []Tag `json:"tags,omitempty"`
+  Summary string `json:"summary,omitempty"`
+  Name string `json:"name,omitempty"`
+  Title string `json:"title,omitempty"`
+  Description string `json:"description,omitempty"`
+  ExternalDocs *ExternalDocs `json:"externalDocs,omitempty"`
+  Deprecated bool `json:"deprecated,omitempty"`
+  Examples []MessageOneOf_1OneOf_1ExamplesItem `json:"examples,omitempty"`
+  Bindings *BindingsObject `json:"bindings,omitempty"`
+  Traits []MessageOneOf_1OneOf_1TraitsItem `json:"traits,omitempty"`
+  AdditionalProperties map[string]interface{} `json:"-",omitempty`
 }

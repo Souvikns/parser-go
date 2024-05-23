@@ -3,9 +3,9 @@ package models
 
 // ApiKeyHttpSecurityScheme represents a ApiKeyHttpSecurityScheme model.
 type ApiKeyHttpSecurityScheme struct {
-  ReservedType *ApiKeyHttpSecuritySchemeType `json:"type"`
-  Name string `json:"name"`
-  In *ApiKeyHttpSecuritySchemeIn `json:"in"`
-  Description string `json:"description"`
-  AdditionalProperties map[string]interface{} `json:"-"`
+  ReservedType *ApiKeyHttpSecuritySchemeType `json:"type,omitempty"`
+  Name string `json:"name,omitempty"`
+  In *ApiKeyHttpSecuritySchemeIn `json:"in,omitempty"`
+  Description string `json:"description,omitempty"`
+  AdditionalProperties map[string]interface{} `json:"-",omitempty`
 }

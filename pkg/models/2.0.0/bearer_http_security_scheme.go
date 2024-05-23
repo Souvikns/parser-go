@@ -3,9 +3,9 @@ package models
 
 // BearerHttpSecurityScheme represents a BearerHttpSecurityScheme model.
 type BearerHttpSecurityScheme struct {
-  Scheme *BearerHttpSecuritySchemeScheme `json:"scheme"`
-  BearerFormat string `json:"bearerFormat"`
-  ReservedType *BearerHttpSecuritySchemeType `json:"type"`
-  Description string `json:"description"`
-  AdditionalProperties map[string]interface{} `json:"-"`
+  Scheme *BearerHttpSecuritySchemeScheme `json:"scheme,omitempty"`
+  BearerFormat string `json:"bearerFormat,omitempty"`
+  ReservedType *BearerHttpSecuritySchemeType `json:"type,omitempty"`
+  Description string `json:"description,omitempty"`
+  AdditionalProperties map[string]interface{} `json:"-",omitempty`
 }

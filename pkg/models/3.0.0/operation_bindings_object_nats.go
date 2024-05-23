@@ -3,7 +3,7 @@ package models
 
 // OperationBindingsObjectNats represents a OperationBindingsObjectNats model.
 type OperationBindingsObjectNats struct {
-  BindingVersion *OperationBindingsObjectNatsBindingVersion `json:"bindingVersion"`
-  Queue string `json:"queue"`
-  AdditionalProperties map[string]interface{} `json:"-"`
+  BindingVersion *OperationBindingsObjectNatsBindingVersion `json:"bindingVersion,omitempty"`
+  Queue string `json:"queue,omitempty"`
+  AdditionalProperties map[string]interface{} `json:"-",omitempty`
 }

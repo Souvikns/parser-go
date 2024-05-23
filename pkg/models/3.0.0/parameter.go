@@ -3,10 +3,10 @@ package models
 
 // Parameter represents a Parameter model.
 type Parameter struct {
-  Description string `json:"description"`
-  Enum []string `json:"enum"`
-  ReservedDefault string `json:"default"`
-  Examples []string `json:"examples"`
-  Location string `json:"location"`
-  AdditionalProperties map[string]interface{} `json:"-"`
+  Description string `json:"description,omitempty"`
+  Enum []string `json:"enum,omitempty"`
+  ReservedDefault string `json:"default,omitempty"`
+  Examples []string `json:"examples,omitempty"`
+  Location string `json:"location,omitempty"`
+  AdditionalProperties map[string]interface{} `json:"-",omitempty`
 }

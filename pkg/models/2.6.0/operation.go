@@ -3,14 +3,14 @@ package models
 
 // Operation represents a Operation model.
 type Operation struct {
-  Traits []OperationTraitsItem `json:"traits"`
-  Summary string `json:"summary"`
-  Description string `json:"description"`
-  Security []map[string][]string `json:"security"`
-  Tags []Tag `json:"tags"`
-  ExternalDocs *ExternalDocs `json:"externalDocs"`
-  OperationId string `json:"operationId"`
-  Bindings *BindingsObject `json:"bindings"`
-  Message *Message `json:"message"`
-  AdditionalProperties map[string]interface{} `json:"-"`
+  Traits []OperationTraitsItem `json:"traits,omitempty"`
+  Summary string `json:"summary,omitempty"`
+  Description string `json:"description,omitempty"`
+  Security []map[string][]string `json:"security,omitempty"`
+  Tags []Tag `json:"tags,omitempty"`
+  ExternalDocs *ExternalDocs `json:"externalDocs,omitempty"`
+  OperationId string `json:"operationId,omitempty"`
+  Bindings *BindingsObject `json:"bindings,omitempty"`
+  Message *Message `json:"message,omitempty"`
+  AdditionalProperties map[string]interface{} `json:"-",omitempty`
 }

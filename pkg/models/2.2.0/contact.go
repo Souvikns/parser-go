@@ -3,8 +3,8 @@ package models
 
 // Contact represents a Contact model.
 type Contact struct {
-  Name string `json:"name"`
-  Url string `json:"url"`
-  Email string `json:"email"`
-  AdditionalProperties map[string]interface{} `json:"-"`
+  Name string `json:"name,omitempty"`
+  Url string `json:"url,omitempty"`
+  Email string `json:"email,omitempty"`
+  AdditionalProperties map[string]interface{} `json:"-",omitempty`
 }

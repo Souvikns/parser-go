@@ -3,13 +3,13 @@ package models
 
 // Server represents a Server model.
 type Server struct {
-  Url string `json:"url"`
-  Description string `json:"description"`
-  Protocol string `json:"protocol"`
-  ProtocolVersion string `json:"protocolVersion"`
-  Variables map[string]ServerVariablesAdditionalProperty `json:"variables"`
-  Security []map[string][]string `json:"security"`
-  Bindings *BindingsObject `json:"bindings"`
-  Tags []Tag `json:"tags"`
-  AdditionalProperties map[string]interface{} `json:"-"`
+  Url string `json:"url,omitempty"`
+  Description string `json:"description,omitempty"`
+  Protocol string `json:"protocol,omitempty"`
+  ProtocolVersion string `json:"protocolVersion,omitempty"`
+  Variables map[string]ServerVariablesAdditionalProperty `json:"variables,omitempty"`
+  Security []map[string][]string `json:"security,omitempty"`
+  Bindings *BindingsObject `json:"bindings,omitempty"`
+  Tags []Tag `json:"tags,omitempty"`
+  AdditionalProperties map[string]interface{} `json:"-",omitempty`
 }

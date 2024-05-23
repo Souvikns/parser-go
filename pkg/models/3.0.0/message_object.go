@@ -3,19 +3,19 @@ package models
 
 // MessageObject represents a MessageObject model.
 type MessageObject struct {
-  ContentType string `json:"contentType"`
-  Headers *AnySchema `json:"headers"`
-  Payload *AnySchema `json:"payload"`
-  CorrelationId *MessageObjectCorrelationId `json:"correlationId"`
-  Tags []MessageObjectTagsItem `json:"tags"`
-  Summary string `json:"summary"`
-  Name string `json:"name"`
-  Title string `json:"title"`
-  Description string `json:"description"`
-  ExternalDocs *MessageObjectExternalDocs `json:"externalDocs"`
-  Deprecated bool `json:"deprecated"`
-  Examples []MessageObjectExamplesItem `json:"examples"`
-  Bindings *MessageObjectBindings `json:"bindings"`
-  Traits []MessageObjectTraitsItem `json:"traits"`
-  AdditionalProperties map[string]interface{} `json:"-"`
+  ContentType string `json:"contentType,omitempty"`
+  Headers *AnySchema `json:"headers,omitempty"`
+  Payload *AnySchema `json:"payload,omitempty"`
+  CorrelationId *MessageObjectCorrelationId `json:"correlationId,omitempty"`
+  Tags []MessageObjectTagsItem `json:"tags,omitempty"`
+  Summary string `json:"summary,omitempty"`
+  Name string `json:"name,omitempty"`
+  Title string `json:"title,omitempty"`
+  Description string `json:"description,omitempty"`
+  ExternalDocs *MessageObjectExternalDocs `json:"externalDocs,omitempty"`
+  Deprecated bool `json:"deprecated,omitempty"`
+  Examples []MessageObjectExamplesItem `json:"examples,omitempty"`
+  Bindings *MessageObjectBindings `json:"bindings,omitempty"`
+  Traits []MessageObjectTraitsItem `json:"traits,omitempty"`
+  AdditionalProperties map[string]interface{} `json:"-",omitempty`
 }

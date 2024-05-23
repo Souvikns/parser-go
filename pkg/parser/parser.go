@@ -73,6 +73,10 @@ func ParseFromUrl[K Asyncapi_3_0_0 | Asyncapi_2_6_0 | Asyncapi_2_5_0 | Asyncapi_
 	return Parse(string(body), obj)
 }
 
+func Generate[K Asyncapi_3_0_0 | Asyncapi_2_6_0 | Asyncapi_2_5_0 | Asyncapi_2_4_0 | Asyncapi_2_3_0 | Asyncapi_2_2_0 | Asyncapi_2_1_0 | Asyncapi_2_0_0] (asyncapi K) ([]byte, error) {
+	return json.Marshal(asyncapi)
+}
+
 func loadDocument(document []byte) (Document, error) {
 	doc := make(map[string]any)
 	err := json.Unmarshal(document, &doc)

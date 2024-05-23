@@ -3,14 +3,14 @@ package models
 
 // AsyncApi_2Dot_1Dot_0SchemaDot represents a AsyncApi_2Dot_1Dot_0SchemaDot model.
 type AsyncApi_2Dot_1Dot_0SchemaDot struct {
-  Asyncapi *Asyncapi `json:"asyncapi"`
-  Id string `json:"id"`
-  Info *Info `json:"info"`
-  Servers map[string]Server `json:"servers"`
-  DefaultContentType string `json:"defaultContentType"`
-  Channels map[string]ChannelItem `json:"channels"`
-  Components *Components `json:"components"`
-  Tags []Tag `json:"tags"`
-  ExternalDocs *ExternalDocs `json:"externalDocs"`
-  AdditionalProperties map[string]interface{} `json:"-"`
+  Asyncapi *Asyncapi `json:"asyncapi,omitempty"`
+  Id string `json:"id,omitempty"`
+  Info *Info `json:"info,omitempty"`
+  Servers map[string]Server `json:"servers,omitempty"`
+  DefaultContentType string `json:"defaultContentType,omitempty"`
+  Channels map[string]ChannelItem `json:"channels,omitempty"`
+  Components *Components `json:"components,omitempty"`
+  Tags []Tag `json:"tags,omitempty"`
+  ExternalDocs *ExternalDocs `json:"externalDocs,omitempty"`
+  AdditionalProperties map[string]interface{} `json:"-",omitempty`
 }

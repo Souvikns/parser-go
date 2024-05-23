@@ -3,17 +3,17 @@ package models
 
 // MessageTrait represents a MessageTrait model.
 type MessageTrait struct {
-  ContentType string `json:"contentType"`
-  Headers *AnySchema `json:"headers"`
-  CorrelationId *MessageTraitCorrelationId `json:"correlationId"`
-  Tags []MessageTraitTagsItem `json:"tags"`
-  Summary string `json:"summary"`
-  Name string `json:"name"`
-  Title string `json:"title"`
-  Description string `json:"description"`
-  ExternalDocs *MessageTraitExternalDocs `json:"externalDocs"`
-  Deprecated bool `json:"deprecated"`
-  Examples []map[string]interface{} `json:"examples"`
-  Bindings *MessageTraitBindings `json:"bindings"`
-  AdditionalProperties map[string]interface{} `json:"-"`
+  ContentType string `json:"contentType,omitempty"`
+  Headers *AnySchema `json:"headers,omitempty"`
+  CorrelationId *MessageTraitCorrelationId `json:"correlationId,omitempty"`
+  Tags []MessageTraitTagsItem `json:"tags,omitempty"`
+  Summary string `json:"summary,omitempty"`
+  Name string `json:"name,omitempty"`
+  Title string `json:"title,omitempty"`
+  Description string `json:"description,omitempty"`
+  ExternalDocs *MessageTraitExternalDocs `json:"externalDocs,omitempty"`
+  Deprecated bool `json:"deprecated,omitempty"`
+  Examples []map[string]interface{} `json:"examples,omitempty"`
+  Bindings *MessageTraitBindings `json:"bindings,omitempty"`
+  AdditionalProperties map[string]interface{} `json:"-",omitempty`
 }

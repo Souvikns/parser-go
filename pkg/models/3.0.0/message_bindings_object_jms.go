@@ -3,7 +3,7 @@ package models
 
 // MessageBindingsObjectJms represents a MessageBindingsObjectJms model.
 type MessageBindingsObjectJms struct {
-  BindingVersion *MessageBindingsObjectJmsBindingVersion `json:"bindingVersion"`
-  Headers *Schema `json:"headers"`
-  AdditionalProperties map[string]interface{} `json:"-"`
+  BindingVersion *MessageBindingsObjectJmsBindingVersion `json:"bindingVersion,omitempty"`
+  Headers *Schema `json:"headers,omitempty"`
+  AdditionalProperties map[string]interface{} `json:"-",omitempty`
 }

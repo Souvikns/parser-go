@@ -3,13 +3,13 @@ package models
 
 // Info represents a Info model.
 type Info struct {
-  Title string `json:"title"`
-  Version string `json:"version"`
-  Description string `json:"description"`
-  TermsOfService string `json:"termsOfService"`
-  Contact *Contact `json:"contact"`
-  License *License `json:"license"`
-  Tags []InfoTagsItem `json:"tags"`
-  ExternalDocs *InfoExternalDocs `json:"externalDocs"`
-  AdditionalProperties map[string]interface{} `json:"-"`
+  Title string `json:"title,omitempty"`
+  Version string `json:"version,omitempty"`
+  Description string `json:"description,omitempty"`
+  TermsOfService string `json:"termsOfService,omitempty"`
+  Contact *Contact `json:"contact,omitempty"`
+  License *License `json:"license,omitempty"`
+  Tags []InfoTagsItem `json:"tags,omitempty"`
+  ExternalDocs *InfoExternalDocs `json:"externalDocs,omitempty"`
+  AdditionalProperties map[string]interface{} `json:"-",omitempty`
 }

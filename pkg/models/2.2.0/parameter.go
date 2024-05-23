@@ -3,9 +3,9 @@ package models
 
 // Parameter represents a Parameter model.
 type Parameter struct {
-  Description string `json:"description"`
-  Schema *Schema `json:"schema"`
-  Location string `json:"location"`
-  Ref string `json:"$ref"`
-  AdditionalProperties map[string]interface{} `json:"-"`
+  Description string `json:"description,omitempty"`
+  Schema *Schema `json:"schema,omitempty"`
+  Location string `json:"location,omitempty"`
+  Ref string `json:"$ref,omitempty"`
+  AdditionalProperties map[string]interface{} `json:"-",omitempty`
 }
