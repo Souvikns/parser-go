@@ -7,5 +7,5 @@ type MessageBindingsObjectGooglepubsub struct {
   Attributes map[string]interface{} `json:"attributes,omitempty"`
   OrderingKey string `json:"orderingKey,omitempty"`
   Schema *BindingsMinusGooglepubsubMinus_0Dot_2Dot_0MinusMessageSchema `json:"schema,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

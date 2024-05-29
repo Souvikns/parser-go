@@ -13,5 +13,5 @@ type Channel struct {
   Tags []ChannelTagsItem `json:"tags,omitempty"`
   ExternalDocs *ChannelExternalDocs `json:"externalDocs,omitempty"`
   Bindings *ChannelBindings `json:"bindings,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

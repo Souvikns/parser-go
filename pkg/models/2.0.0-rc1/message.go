@@ -18,5 +18,5 @@ type Message struct {
   Examples []map[string]interface{} `json:"examples,omitempty"`
   ProtocolInfo map[string]map[string]interface{} `json:"protocolInfo,omitempty"`
   Traits []MessageTraitsItem `json:"traits,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

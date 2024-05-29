@@ -21,5 +21,5 @@ type BindingsObject struct {
   Solace interface{} `json:"solace,omitempty"`
   Googlepubsub interface{} `json:"googlepubsub,omitempty"`
   Pulsar interface{} `json:"pulsar,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

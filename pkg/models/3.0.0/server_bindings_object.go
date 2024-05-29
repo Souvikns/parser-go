@@ -20,5 +20,5 @@ type ServerBindingsObject struct {
   Solace *ServerBindingsObjectSolace `json:"solace,omitempty"`
   Googlepubsub interface{} `json:"googlepubsub,omitempty"`
   Pulsar *ServerBindingsObjectPulsar `json:"pulsar,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

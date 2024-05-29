@@ -10,5 +10,5 @@ type OperationTrait struct {
   OperationId string `json:"operationId,omitempty"`
   Security []map[string][]string `json:"security,omitempty"`
   Bindings *BindingsObject `json:"bindings,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

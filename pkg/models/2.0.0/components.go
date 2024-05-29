@@ -14,5 +14,5 @@ type Components struct {
   ChannelBindings map[string]BindingsObject `json:"channelBindings,omitempty"`
   OperationBindings map[string]BindingsObject `json:"operationBindings,omitempty"`
   MessageBindings map[string]BindingsObject `json:"messageBindings,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

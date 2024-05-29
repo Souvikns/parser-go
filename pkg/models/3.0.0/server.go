@@ -15,5 +15,5 @@ type Server struct {
   Tags []ServerTagsItem `json:"tags,omitempty"`
   ExternalDocs *ServerExternalDocs `json:"externalDocs,omitempty"`
   Bindings *ServerBindings `json:"bindings,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

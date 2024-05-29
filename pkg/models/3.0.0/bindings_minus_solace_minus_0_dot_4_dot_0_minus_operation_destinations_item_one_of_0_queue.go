@@ -8,5 +8,5 @@ type BindingsMinusSolaceMinus_0Dot_4Dot_0MinusOperationDestinationsItemOneOf_0Qu
   AccessType *BindingsMinusSolaceMinus_0Dot_4Dot_0MinusOperationDestinationsItemOneOf_0QueueAccessType `json:"accessType,omitempty"`
   MaxTtl string `json:"maxTtl,omitempty"`
   MaxMsgSpoolUsage string `json:"maxMsgSpoolUsage,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

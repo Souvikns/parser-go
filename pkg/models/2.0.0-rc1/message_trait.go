@@ -16,5 +16,5 @@ type MessageTrait struct {
   Deprecated bool `json:"deprecated,omitempty"`
   Examples []map[string]interface{} `json:"examples,omitempty"`
   ProtocolInfo map[string]map[string]interface{} `json:"protocolInfo,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

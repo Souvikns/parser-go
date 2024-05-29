@@ -9,5 +9,5 @@ type Info struct {
   TermsOfService string `json:"termsOfService,omitempty"`
   Contact *Contact `json:"contact,omitempty"`
   License *License `json:"license,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

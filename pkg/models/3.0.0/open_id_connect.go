@@ -7,5 +7,5 @@ type OpenIdConnect struct {
   Description string `json:"description,omitempty"`
   OpenIdConnectUrl string `json:"openIdConnectUrl,omitempty"`
   Scopes []string `json:"scopes,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

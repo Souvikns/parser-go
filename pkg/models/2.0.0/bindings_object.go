@@ -16,5 +16,5 @@ type BindingsObject struct {
   Sqs interface{} `json:"sqs,omitempty"`
   Stomp interface{} `json:"stomp,omitempty"`
   Redis interface{} `json:"redis,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

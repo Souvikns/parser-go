@@ -7,5 +7,5 @@ type Oauth2FlowsFlowsAuthorizationCode struct {
   TokenUrl string `json:"tokenUrl,omitempty"`
   RefreshUrl string `json:"refreshUrl,omitempty"`
   Scopes map[string]string `json:"scopes,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

@@ -10,5 +10,5 @@ type Server struct {
   Variables map[string]ServerVariable `json:"variables,omitempty"`
   Security []map[string][]string `json:"security,omitempty"`
   Bindings *BindingsObject `json:"bindings,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

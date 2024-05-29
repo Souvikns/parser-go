@@ -11,5 +11,5 @@ type Operation struct {
   OperationId string `json:"operationId,omitempty"`
   ProtocolInfo map[string]map[string]interface{} `json:"protocolInfo,omitempty"`
   Message *OperationMessage `json:"message,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

@@ -5,5 +5,5 @@ package models
 type SaslScramSecurityScheme struct {
   ReservedType *SaslScramSecuritySchemeType `json:"type,omitempty"`
   Description string `json:"description,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

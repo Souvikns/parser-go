@@ -9,5 +9,5 @@ type OperationTrait struct {
   ExternalDocs *ExternalDocs `json:"externalDocs,omitempty"`
   OperationId string `json:"operationId,omitempty"`
   Bindings *BindingsObject `json:"bindings,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

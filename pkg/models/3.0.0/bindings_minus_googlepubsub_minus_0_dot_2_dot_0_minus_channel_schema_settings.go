@@ -7,5 +7,5 @@ type BindingsMinusGooglepubsubMinus_0Dot_2Dot_0MinusChannelSchemaSettings struct
   FirstRevisionId string `json:"firstRevisionId,omitempty"`
   LastRevisionId string `json:"lastRevisionId,omitempty"`
   Name string `json:"name,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

@@ -9,5 +9,5 @@ type ServerBindingsObjectIbmmq struct {
   CipherSpec string `json:"cipherSpec,omitempty"`
   MultiEndpointServer bool `json:"multiEndpointServer,omitempty"`
   HeartBeatInterval int `json:"heartBeatInterval,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

@@ -12,5 +12,5 @@ type Operation struct {
   OperationId string `json:"operationId,omitempty"`
   Bindings *BindingsObject `json:"bindings,omitempty"`
   Message *Message `json:"message,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

@@ -7,5 +7,5 @@ type BearerHttpSecurityScheme struct {
   BearerFormat string `json:"bearerFormat,omitempty"`
   ReservedType *BearerHttpSecuritySchemeType `json:"type,omitempty"`
   Description string `json:"description,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

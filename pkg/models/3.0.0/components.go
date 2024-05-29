@@ -22,5 +22,5 @@ type Components struct {
   MessageBindings map[string]ComponentsMessageBindings `json:"messageBindings,omitempty"`
   Tags map[string]ComponentsTags `json:"tags,omitempty"`
   ExternalDocs map[string]ComponentsExternalDocs `json:"externalDocs,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

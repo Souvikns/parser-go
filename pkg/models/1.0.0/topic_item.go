@@ -7,5 +7,5 @@ type TopicItem struct {
   Publish *Message `json:"publish,omitempty"`
   Subscribe *Message `json:"subscribe,omitempty"`
   Deprecated bool `json:"deprecated,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

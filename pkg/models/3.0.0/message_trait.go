@@ -15,5 +15,5 @@ type MessageTrait struct {
   Deprecated bool `json:"deprecated,omitempty"`
   Examples []map[string]interface{} `json:"examples,omitempty"`
   Bindings *MessageTraitBindings `json:"bindings,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

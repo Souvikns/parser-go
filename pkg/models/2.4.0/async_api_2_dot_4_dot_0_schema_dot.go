@@ -12,5 +12,5 @@ type AsyncApi_2Dot_4Dot_0SchemaDot struct {
   Components *Components `json:"components,omitempty"`
   Tags []Tag `json:"tags,omitempty"`
   ExternalDocs *ExternalDocs `json:"externalDocs,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

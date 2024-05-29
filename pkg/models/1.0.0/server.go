@@ -8,5 +8,5 @@ type Server struct {
   Scheme *ServerScheme `json:"scheme,omitempty"`
   SchemeVersion string `json:"schemeVersion,omitempty"`
   Variables map[string]ServerVariable `json:"variables,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

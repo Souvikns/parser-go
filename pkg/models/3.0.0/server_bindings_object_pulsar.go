@@ -5,5 +5,5 @@ package models
 type ServerBindingsObjectPulsar struct {
   BindingVersion *ServerBindingsObjectPulsarBindingVersion `json:"bindingVersion,omitempty"`
   Tenant string `json:"tenant,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

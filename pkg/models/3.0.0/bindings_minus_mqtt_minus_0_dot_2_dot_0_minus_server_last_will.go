@@ -7,5 +7,5 @@ type BindingsMinusMqttMinus_0Dot_2Dot_0MinusServerLastWill struct {
   Qos *BindingsMinusMqttMinus_0Dot_2Dot_0MinusServerLastWillQos `json:"qos,omitempty"`
   Message string `json:"message,omitempty"`
   Retain bool `json:"retain,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

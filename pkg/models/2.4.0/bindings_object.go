@@ -19,5 +19,5 @@ type BindingsObject struct {
   Redis interface{} `json:"redis,omitempty"`
   Ibmmq interface{} `json:"ibmmq,omitempty"`
   Solace interface{} `json:"solace,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

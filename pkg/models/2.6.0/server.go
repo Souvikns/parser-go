@@ -11,5 +11,5 @@ type Server struct {
   Security []map[string][]string `json:"security,omitempty"`
   Bindings *BindingsObject `json:"bindings,omitempty"`
   Tags []Tag `json:"tags,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

@@ -10,5 +10,5 @@ type OperationTrait struct {
   Tags []OperationTagsItem `json:"tags,omitempty"`
   ExternalDocs *OperationExternalDocs `json:"externalDocs,omitempty"`
   Bindings *OperationTraitBindings `json:"bindings,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

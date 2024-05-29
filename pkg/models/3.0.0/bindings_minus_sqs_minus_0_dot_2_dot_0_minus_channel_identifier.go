@@ -5,5 +5,5 @@ package models
 type BindingsMinusSqsMinus_0Dot_2Dot_0MinusChannelIdentifier struct {
   Arn string `json:"arn,omitempty"`
   Name string `json:"name,omitempty"`
-  AdditionalProperties map[string]AdditionalProperties `json:"-",omitempty`
+  AdditionalProperties map[string]AdditionalProperties `json:"-,omitempty"`
 }

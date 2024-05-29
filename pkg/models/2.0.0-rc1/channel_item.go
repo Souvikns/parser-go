@@ -9,5 +9,5 @@ type ChannelItem struct {
   Subscribe *Operation `json:"subscribe,omitempty"`
   Deprecated bool `json:"deprecated,omitempty"`
   ProtocolInfo map[string]map[string]interface{} `json:"protocolInfo,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

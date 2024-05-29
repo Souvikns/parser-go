@@ -17,5 +17,5 @@ type MessageObject struct {
   Examples []MessageObjectExamplesItem `json:"examples,omitempty"`
   Bindings *MessageObjectBindings `json:"bindings,omitempty"`
   Traits []MessageObjectTraitsItem `json:"traits,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

@@ -14,5 +14,5 @@ type BindingsMinusSqsMinus_0Dot_2Dot_0MinusChannelQueue struct {
   RedrivePolicy *BindingsMinusSqsMinus_0Dot_2Dot_0MinusChannelRedrivePolicy `json:"redrivePolicy,omitempty"`
   Policy *BindingsMinusSqsMinus_0Dot_2Dot_0MinusChannelPolicy `json:"policy,omitempty"`
   Tags map[string]interface{} `json:"tags,omitempty"`
-  AdditionalProperties map[string]AdditionalProperties `json:"-",omitempty`
+  AdditionalProperties map[string]AdditionalProperties `json:"-,omitempty"`
 }

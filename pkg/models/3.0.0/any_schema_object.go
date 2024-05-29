@@ -53,5 +53,5 @@ type AnySchemaObject struct {
   ExternalDocs *SchemaAllOf_1ExternalDocs `json:"externalDocs,omitempty"`
   Deprecated bool `json:"deprecated,omitempty"`
   SchemaFormat *MultiFormatSchemaElseSchemaFormat `json:"schemaFormat,omitempty"`
-  ReservedAdditionalProperties map[string]ReservedAdditionalProperties `json:"-",omitempty`
+  ReservedAdditionalProperties map[string]ReservedAdditionalProperties `json:"-,omitempty"`
 }

@@ -20,5 +20,5 @@ type ChannelBindingsObject struct {
   Solace interface{} `json:"solace,omitempty"`
   Googlepubsub *ChannelBindingsObjectGooglepubsub `json:"googlepubsub,omitempty"`
   Pulsar *ChannelBindingsObjectPulsar `json:"pulsar,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

@@ -10,5 +10,5 @@ type Server struct {
   Variables map[string]ServerVariable `json:"variables,omitempty"`
   BaseChannel string `json:"baseChannel,omitempty"`
   Security []map[string][]string `json:"security,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

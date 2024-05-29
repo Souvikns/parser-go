@@ -8,5 +8,5 @@ type TopicItem struct {
   Publish *Operation `json:"publish,omitempty"`
   Subscribe *Operation `json:"subscribe,omitempty"`
   Deprecated bool `json:"deprecated,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

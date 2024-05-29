@@ -11,5 +11,5 @@ type BindingsMinusSnsMinus_0Dot_1Dot_0MinusOperationDeliveryPolicy struct {
   NumMaxDelayRetries int `json:"numMaxDelayRetries,omitempty"`
   BackoffFunction *BindingsMinusSnsMinus_0Dot_1Dot_0MinusOperationDeliveryPolicyBackoffFunction `json:"backoffFunction,omitempty"`
   MaxReceivesPerSecond int `json:"maxReceivesPerSecond,omitempty"`
-  AdditionalProperties map[string]AdditionalProperties `json:"-",omitempty`
+  AdditionalProperties map[string]AdditionalProperties `json:"-,omitempty"`
 }

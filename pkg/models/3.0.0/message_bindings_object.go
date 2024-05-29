@@ -19,5 +19,5 @@ type MessageBindingsObject struct {
   Ibmmq *MessageBindingsObjectIbmmq `json:"ibmmq,omitempty"`
   Solace interface{} `json:"solace,omitempty"`
   Googlepubsub *MessageBindingsObjectGooglepubsub `json:"googlepubsub,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

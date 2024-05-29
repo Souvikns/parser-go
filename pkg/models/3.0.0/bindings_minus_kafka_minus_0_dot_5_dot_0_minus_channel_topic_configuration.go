@@ -12,5 +12,5 @@ type BindingsMinusKafkaMinus_0Dot_5Dot_0MinusChannelTopicConfiguration struct {
   ConfluentDotKeyDotSubjectDotNameDotStrategy string `json:"confluent.key.subject.name.strategy,omitempty"`
   ConfluentDotValueDotSchemaDotValidation bool `json:"confluent.value.schema.validation,omitempty"`
   ConfluentDotValueDotSubjectDotNameDotStrategy string `json:"confluent.value.subject.name.strategy,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

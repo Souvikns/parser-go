@@ -6,5 +6,5 @@ type Oauth2Flows struct {
   ReservedType *Oauth2FlowsType `json:"type,omitempty"`
   Description string `json:"description,omitempty"`
   Flows *Oauth2FlowsFlows `json:"flows,omitempty"`
-  AdditionalProperties map[string]AdditionalProperties `json:"-",omitempty`
+  AdditionalProperties map[string]AdditionalProperties `json:"-,omitempty"`
 }

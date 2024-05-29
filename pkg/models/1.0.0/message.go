@@ -12,5 +12,5 @@ type Message struct {
   ExternalDocs *ExternalDocs `json:"externalDocs,omitempty"`
   Deprecated bool `json:"deprecated,omitempty"`
   Example interface{} `json:"example,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

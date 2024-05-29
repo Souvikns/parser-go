@@ -8,5 +8,5 @@ type BindingsMinusSnsMinus_0Dot_1Dot_0MinusOperationIdentifier struct {
   Phone string `json:"phone,omitempty"`
   Arn string `json:"arn,omitempty"`
   Name string `json:"name,omitempty"`
-  AdditionalProperties map[string]AdditionalProperties `json:"-",omitempty`
+  AdditionalProperties map[string]AdditionalProperties `json:"-,omitempty"`
 }

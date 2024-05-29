@@ -199,6 +199,7 @@ func main() {
 		panic(err)
 	}
 	fmt.Println(asyncapi.Asyncapi)
+  fmt.Println(asyncapi.Components.Messages["ServerAnnounce"].ModelinaAnyType)
 	data, err := parser.Generate(asyncapi)
 	if err != nil {
 		fmt.Println(err)

@@ -5,5 +5,5 @@ package models
 type CorrelationId struct {
   Description string `json:"description,omitempty"`
   Location string `json:"location,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

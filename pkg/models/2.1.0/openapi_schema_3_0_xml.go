@@ -8,5 +8,5 @@ type OpenapiSchema_3_0Xml struct {
   Prefix string `json:"prefix,omitempty"`
   Attribute bool `json:"attribute,omitempty"`
   Wrapped bool `json:"wrapped,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

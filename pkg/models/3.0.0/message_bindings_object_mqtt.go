@@ -8,5 +8,5 @@ type MessageBindingsObjectMqtt struct {
   CorrelationData *BindingsMinusMqttMinus_0Dot_2Dot_0MinusMessageCorrelationData `json:"correlationData,omitempty"`
   ContentType string `json:"contentType,omitempty"`
   ResponseTopic *BindingsMinusMqttMinus_0Dot_2Dot_0MinusMessageResponseTopic `json:"responseTopic,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

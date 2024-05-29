@@ -14,5 +14,5 @@ type OneOf_0 struct {
   Tags []Tag `json:"tags,omitempty"`
   Security []map[string][]string `json:"security,omitempty"`
   ExternalDocs *ExternalDocs `json:"externalDocs,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

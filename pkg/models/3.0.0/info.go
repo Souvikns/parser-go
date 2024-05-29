@@ -11,5 +11,5 @@ type Info struct {
   License *License `json:"license,omitempty"`
   Tags []InfoTagsItem `json:"tags,omitempty"`
   ExternalDocs *InfoExternalDocs `json:"externalDocs,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

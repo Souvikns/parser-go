@@ -8,5 +8,5 @@ type MessageBindingsObjectKafka struct {
   SchemaIdLocation *BindingsMinusKafkaMinus_0Dot_5Dot_0MinusMessageSchemaIdLocation `json:"schemaIdLocation,omitempty"`
   SchemaIdPayloadEncoding string `json:"schemaIdPayloadEncoding,omitempty"`
   SchemaLookupStrategy string `json:"schemaLookupStrategy,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

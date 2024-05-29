@@ -11,5 +11,5 @@ type BindingsMinusSnsMinus_0Dot_1Dot_0MinusOperationConsumer struct {
   RedrivePolicy *BindingsMinusSnsMinus_0Dot_1Dot_0MinusOperationRedrivePolicy `json:"redrivePolicy,omitempty"`
   DeliveryPolicy *BindingsMinusSnsMinus_0Dot_1Dot_0MinusOperationDeliveryPolicy `json:"deliveryPolicy,omitempty"`
   DisplayName string `json:"displayName,omitempty"`
-  AdditionalProperties map[string]AdditionalProperties `json:"-",omitempty`
+  AdditionalProperties map[string]AdditionalProperties `json:"-,omitempty"`
 }

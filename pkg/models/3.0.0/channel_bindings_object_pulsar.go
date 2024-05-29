@@ -11,5 +11,5 @@ type ChannelBindingsObjectPulsar struct {
   Retention *BindingsMinusPulsarMinus_0Dot_1Dot_0MinusChannelRetention `json:"retention,omitempty"`
   Ttl int `json:"ttl,omitempty"`
   Deduplication bool `json:"deduplication,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

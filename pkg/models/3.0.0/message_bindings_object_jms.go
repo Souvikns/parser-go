@@ -5,5 +5,5 @@ package models
 type MessageBindingsObjectJms struct {
   BindingVersion *MessageBindingsObjectJmsBindingVersion `json:"bindingVersion,omitempty"`
   Headers *Schema `json:"headers,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

@@ -19,5 +19,5 @@ type OperationBindingsObject struct {
   Ibmmq interface{} `json:"ibmmq,omitempty"`
   Solace *OperationBindingsObjectSolace `json:"solace,omitempty"`
   Googlepubsub interface{} `json:"googlepubsub,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

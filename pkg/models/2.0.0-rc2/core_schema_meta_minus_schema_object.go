@@ -49,5 +49,5 @@ type CoreSchemaMetaMinusSchemaObject struct {
   AnyOf []CoreSchemaMetaMinusSchema `json:"anyOf,omitempty"`
   OneOf []CoreSchemaMetaMinusSchema `json:"oneOf,omitempty"`
   Not *CoreSchemaMetaMinusSchema `json:"not,omitempty"`
-  ReservedAdditionalProperties map[string]ReservedAdditionalProperties `json:"-",omitempty`
+  ReservedAdditionalProperties map[string]ReservedAdditionalProperties `json:"-,omitempty"`
 }

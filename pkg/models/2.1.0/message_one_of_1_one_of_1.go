@@ -18,5 +18,5 @@ type MessageOneOf_1OneOf_1 struct {
   Examples []MessageOneOf_1OneOf_1ExamplesItem `json:"examples,omitempty"`
   Bindings *BindingsObject `json:"bindings,omitempty"`
   Traits []MessageOneOf_1OneOf_1TraitsItem `json:"traits,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

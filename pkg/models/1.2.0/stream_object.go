@@ -6,5 +6,5 @@ type StreamObject struct {
   Framing *StreamFramingObject `json:"framing,omitempty"`
   Read []Message `json:"read,omitempty"`
   Write []Message `json:"write,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

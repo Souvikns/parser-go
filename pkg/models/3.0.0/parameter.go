@@ -8,5 +8,5 @@ type Parameter struct {
   ReservedDefault string `json:"default,omitempty"`
   Examples []string `json:"examples,omitempty"`
   Location string `json:"location,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

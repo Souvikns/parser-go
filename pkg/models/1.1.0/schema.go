@@ -36,5 +36,5 @@ type Schema struct {
   Xml *Xml `json:"xml,omitempty"`
   ExternalDocs *ExternalDocs `json:"externalDocs,omitempty"`
   Example interface{} `json:"example,omitempty"`
-  ReservedAdditionalProperties map[string]interface{} `json:"-",omitempty`
+  ReservedAdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

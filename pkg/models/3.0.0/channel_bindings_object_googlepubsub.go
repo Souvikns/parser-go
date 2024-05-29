@@ -8,5 +8,5 @@ type ChannelBindingsObjectGooglepubsub struct {
   MessageRetentionDuration string `json:"messageRetentionDuration,omitempty"`
   MessageStoragePolicy *BindingsMinusGooglepubsubMinus_0Dot_2Dot_0MinusChannelMessageStoragePolicy `json:"messageStoragePolicy,omitempty"`
   SchemaSettings *BindingsMinusGooglepubsubMinus_0Dot_2Dot_0MinusChannelSchemaSettings `json:"schemaSettings,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

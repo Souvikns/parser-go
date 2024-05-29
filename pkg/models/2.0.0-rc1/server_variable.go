@@ -7,5 +7,5 @@ type ServerVariable struct {
   ReservedDefault string `json:"default,omitempty"`
   Description string `json:"description,omitempty"`
   Examples []string `json:"examples,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

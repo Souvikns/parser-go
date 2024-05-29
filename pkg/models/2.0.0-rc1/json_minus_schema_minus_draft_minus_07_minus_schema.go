@@ -36,5 +36,5 @@ type JsonMinusSchemaMinusDraftMinus_07MinusSchema struct {
   AnyOf []JsonMinusSchemaMinusDraftMinus_07MinusSchema `json:"anyOf,omitempty"`
   OneOf []JsonMinusSchemaMinusDraftMinus_07MinusSchema `json:"oneOf,omitempty"`
   Not *JsonMinusSchemaMinusDraftMinus_07MinusSchema `json:"not,omitempty"`
-  ReservedAdditionalProperties map[string]interface{} `json:"-",omitempty`
+  ReservedAdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

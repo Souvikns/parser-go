@@ -52,5 +52,5 @@ type SchemaObject struct {
   Discriminator string `json:"discriminator,omitempty"`
   ExternalDocs *ExternalDocs `json:"externalDocs,omitempty"`
   Deprecated bool `json:"deprecated,omitempty"`
-  ReservedAdditionalProperties map[string]ReservedAdditionalProperties `json:"-",omitempty`
+  ReservedAdditionalProperties map[string]ReservedAdditionalProperties `json:"-,omitempty"`
 }

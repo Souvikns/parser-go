@@ -10,5 +10,5 @@ type ServerBindingsObjectMqtt struct {
   KeepAlive int `json:"keepAlive,omitempty"`
   SessionExpiryInterval *BindingsMinusMqttMinus_0Dot_2Dot_0MinusServerSessionExpiryInterval `json:"sessionExpiryInterval,omitempty"`
   MaximumPacketSize *BindingsMinusMqttMinus_0Dot_2Dot_0MinusServerMaximumPacketSize `json:"maximumPacketSize,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

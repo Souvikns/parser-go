@@ -52,5 +52,5 @@ type MessageTraitHeadersObject struct {
   Discriminator *SchemaAllOf_1Discriminator `json:"discriminator,omitempty"`
   ExternalDocs *ExternalDocs `json:"externalDocs,omitempty"`
   Deprecated bool `json:"deprecated,omitempty"`
-  ReservedAdditionalProperties map[string]ReservedAdditionalProperties `json:"-",omitempty`
+  ReservedAdditionalProperties map[string]ReservedAdditionalProperties `json:"-,omitempty"`
 }

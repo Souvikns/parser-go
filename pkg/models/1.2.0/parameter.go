@@ -7,5 +7,5 @@ type Parameter struct {
   Name string `json:"name,omitempty"`
   Schema *Schema `json:"schema,omitempty"`
   Ref string `json:"$ref,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

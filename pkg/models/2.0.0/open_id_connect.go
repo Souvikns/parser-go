@@ -6,5 +6,5 @@ type OpenIdConnect struct {
   ReservedType *OpenIdConnectType `json:"type,omitempty"`
   Description string `json:"description,omitempty"`
   OpenIdConnectUrl string `json:"openIdConnectUrl,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

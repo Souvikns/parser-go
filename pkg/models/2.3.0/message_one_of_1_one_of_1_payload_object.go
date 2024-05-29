@@ -55,5 +55,5 @@ type MessageOneOf_1OneOf_1PayloadObject struct {
   Nullable bool `json:"nullable,omitempty"`
   Example interface{} `json:"example,omitempty"`
   Xml *OpenapiSchema_3_0Xml `json:"xml,omitempty"`
-  ReservedAdditionalProperties map[string]ReservedAdditionalProperties `json:"-",omitempty`
+  ReservedAdditionalProperties map[string]ReservedAdditionalProperties `json:"-,omitempty"`
 }

@@ -6,5 +6,5 @@ type ApiKey struct {
   ReservedType *ApiKeyType `json:"type,omitempty"`
   In *ApiKeyIn `json:"in,omitempty"`
   Description string `json:"description,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

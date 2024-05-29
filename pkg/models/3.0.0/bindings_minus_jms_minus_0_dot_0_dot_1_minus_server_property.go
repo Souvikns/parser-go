@@ -5,5 +5,5 @@ package models
 type BindingsMinusJmsMinus_0Dot_0Dot_1MinusServerProperty struct {
   Name string `json:"name,omitempty"`
   Value *BindingsMinusJmsMinus_0Dot_0Dot_1MinusServerPropertyValue `json:"value,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

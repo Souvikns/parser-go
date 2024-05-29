@@ -6,5 +6,5 @@ type Contact struct {
   Name string `json:"name,omitempty"`
   Url string `json:"url,omitempty"`
   Email string `json:"email,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

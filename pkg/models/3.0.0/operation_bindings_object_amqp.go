@@ -13,5 +13,5 @@ type OperationBindingsObjectAmqp struct {
   Bcc []string `json:"bcc,omitempty"`
   Timestamp bool `json:"timestamp,omitempty"`
   Ack bool `json:"ack,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

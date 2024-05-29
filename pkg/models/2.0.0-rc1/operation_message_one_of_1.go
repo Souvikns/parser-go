@@ -4,5 +4,5 @@ package models
 // OperationMessageOneOf_1 represents a OperationMessageOneOf_1 model.
 type OperationMessageOneOf_1 struct {
   OneOf []Message `json:"oneOf,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

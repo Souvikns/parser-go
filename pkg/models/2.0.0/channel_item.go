@@ -10,5 +10,5 @@ type ChannelItem struct {
   Subscribe *Operation `json:"subscribe,omitempty"`
   Deprecated bool `json:"deprecated,omitempty"`
   Bindings *BindingsObject `json:"bindings,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }

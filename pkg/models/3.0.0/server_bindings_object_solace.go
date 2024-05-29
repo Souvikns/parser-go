@@ -7,5 +7,5 @@ type ServerBindingsObjectSolace struct {
   MsgVpn string `json:"msgVpn,omitempty"`
   ClientName string `json:"clientName,omitempty"`
   MsvVpn string `json:"msvVpn,omitempty"`
-  AdditionalProperties map[string]interface{} `json:"-",omitempty`
+  AdditionalProperties map[string]interface{} `json:"-,omitempty"`
 }
