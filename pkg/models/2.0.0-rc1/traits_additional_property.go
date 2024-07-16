@@ -3,6 +3,6 @@ package models
 
 // TraitsAdditionalProperty represents a TraitsAdditionalProperty model.
 type TraitsAdditionalProperty struct {
-  OperationTrait
-  MessageTrait
+  OperationTrait `json:"-,omitempty`
+  MessageTrait `json:"-,omitempty`
 }

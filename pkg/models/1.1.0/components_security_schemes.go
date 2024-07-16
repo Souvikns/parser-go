@@ -3,6 +3,6 @@ package models
 
 // ComponentsSecuritySchemes represents a ComponentsSecuritySchemes model.
 type ComponentsSecuritySchemes struct {
-  ModelinaAnyType interface{}
-  ComponentsSecuritySchemesPatternProperty_0
+  ModelinaAnyType interface{} `json:"-,omitempty`
+  ComponentsSecuritySchemesPatternProperty_0 `json:"-,omitempty`
 }

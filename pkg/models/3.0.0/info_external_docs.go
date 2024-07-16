@@ -3,6 +3,6 @@ package models
 
 // InfoExternalDocs represents a InfoExternalDocs model.
 type InfoExternalDocs struct {
-  Reference
-  ExternalDocs
+  Reference `json:"-,omitempty`
+  ExternalDocs `json:"-,omitempty`
 }

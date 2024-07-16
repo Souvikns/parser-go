@@ -3,6 +3,6 @@ package models
 
 // AdditionalProperties represents a AdditionalProperties model.
 type AdditionalProperties struct {
-  ModelinaAnyType interface{}
-  TopicItem
+  ModelinaAnyType interface{} `json:"-,omitempty`
+  TopicItem `json:"-,omitempty`
 }

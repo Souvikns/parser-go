@@ -3,6 +3,6 @@ package models
 
 // JsonMinusSchemaMinusDraftMinus_07MinusSchemaType represents a JsonMinusSchemaMinusDraftMinus_07MinusSchemaType model.
 type JsonMinusSchemaMinusDraftMinus_07MinusSchemaType struct {
-  JsonMinusSchemaMinusDraftMinus_07MinusSchemaSimpleTypes
-  ModelinaArrType []JsonMinusSchemaMinusDraftMinus_07MinusSchemaSimpleTypes
+  JsonMinusSchemaMinusDraftMinus_07MinusSchemaSimpleTypes `json:"-,omitempty`
+  ModelinaArrType []JsonMinusSchemaMinusDraftMinus_07MinusSchemaSimpleTypes `json:"-,omitempty`
 }

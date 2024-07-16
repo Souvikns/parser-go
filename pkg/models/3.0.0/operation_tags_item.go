@@ -3,6 +3,6 @@ package models
 
 // OperationTagsItem represents a OperationTagsItem model.
 type OperationTagsItem struct {
-  Reference
-  Tag
+  Reference `json:"-,omitempty`
+  Tag `json:"-,omitempty`
 }

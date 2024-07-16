@@ -3,6 +3,6 @@ package models
 
 // ParametersAdditionalProperty represents a ParametersAdditionalProperty model.
 type ParametersAdditionalProperty struct {
-  Reference
-  Parameter
+  Reference `json:"-,omitempty`
+  Parameter `json:"-,omitempty`
 }

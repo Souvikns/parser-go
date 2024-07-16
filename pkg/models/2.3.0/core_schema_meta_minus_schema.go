@@ -3,6 +3,6 @@ package models
 
 // CoreSchemaMetaMinusSchema represents a CoreSchemaMetaMinusSchema model.
 type CoreSchemaMetaMinusSchema struct {
-  CoreSchemaMetaMinusSchemaObject
-  bool
+  CoreSchemaMetaMinusSchemaObject `json:"-,omitempty`
+  bool `json:"-,omitempty`
 }

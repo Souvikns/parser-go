@@ -3,6 +3,6 @@ package models
 
 // OperationMessage represents a OperationMessage model.
 type OperationMessage struct {
-  Message
-  OperationMessageOneOf_1
+  Message `json:"-,omitempty`
+  OperationMessageOneOf_1 `json:"-,omitempty`
 }

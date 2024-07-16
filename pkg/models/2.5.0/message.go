@@ -3,6 +3,6 @@ package models
 
 // Message represents a Message model.
 type Message struct {
-  Reference
-  MessageOneOf_1
+  Reference `json:"-,omitempty`
+  MessageOneOf_1 `json:"-,omitempty`
 }

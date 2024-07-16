@@ -3,6 +3,6 @@ package models
 
 // MessageObjectExternalDocs represents a MessageObjectExternalDocs model.
 type MessageObjectExternalDocs struct {
-  Reference
-  ExternalDocs
+  Reference `json:"-,omitempty`
+  ExternalDocs `json:"-,omitempty`
 }

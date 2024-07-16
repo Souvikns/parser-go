@@ -3,6 +3,6 @@ package models
 
 // MessageTraitsItem represents a MessageTraitsItem model.
 type MessageTraitsItem struct {
-  Reference
-  MessageTrait
+  Reference `json:"-,omitempty`
+  MessageTrait `json:"-,omitempty`
 }

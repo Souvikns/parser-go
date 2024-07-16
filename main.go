@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 	"os"
+
 	"github.com/Souvikns/parser-go/pkg/parser"
 )
-
 
 const SPEC_3_0_0 = `{
   "asyncapi": "3.0.0",
@@ -195,11 +195,9 @@ func main() {
 	var asyncapi parser.Asyncapi_3_0_0
 
 	err := parser.Parse(SPEC_3_0_0, &asyncapi)
-	if err!=nil {
+	if err != nil {
 		panic(err)
 	}
-	fmt.Println(asyncapi.Asyncapi)
-  fmt.Println(asyncapi.Components.Messages["ServerAnnounce"].ModelinaAnyType)
 	data, err := parser.Generate(asyncapi)
 	if err != nil {
 		fmt.Println(err)

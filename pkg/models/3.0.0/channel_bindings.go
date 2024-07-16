@@ -3,6 +3,6 @@ package models
 
 // ChannelBindings represents a ChannelBindings model.
 type ChannelBindings struct {
-  Reference
-  ChannelBindingsObject
+  Reference `json:"-,omitempty`
+  ChannelBindingsObject `json:"-,omitempty`
 }

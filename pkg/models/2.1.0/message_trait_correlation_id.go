@@ -3,6 +3,6 @@ package models
 
 // MessageTraitCorrelationId represents a MessageTraitCorrelationId model.
 type MessageTraitCorrelationId struct {
-  Reference
-  CorrelationId
+  Reference `json:"-,omitempty`
+  CorrelationId `json:"-,omitempty`
 }

@@ -3,6 +3,6 @@ package models
 
 // ComponentsReplyAddresses represents a ComponentsReplyAddresses model.
 type ComponentsReplyAddresses struct {
-  ModelinaAnyType interface{}
-  ComponentsReplyAddressesPatternProperty_0
+  ModelinaAnyType interface{} `json:"-,omitempty`
+  ComponentsReplyAddressesPatternProperty_0 `json:"-,omitempty`
 }

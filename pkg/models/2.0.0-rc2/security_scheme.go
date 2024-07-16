@@ -3,12 +3,12 @@ package models
 
 // SecurityScheme represents a SecurityScheme model.
 type SecurityScheme struct {
-  UserPassword
-  ApiKey
-  X509
-  SymmetricEncryption
-  AsymmetricEncryption
-  HttpSecurityScheme
-  Oauth2Flows
-  OpenIdConnect
+  UserPassword `json:"-,omitempty`
+  ApiKey `json:"-,omitempty`
+  X509 `json:"-,omitempty`
+  SymmetricEncryption `json:"-,omitempty`
+  AsymmetricEncryption `json:"-,omitempty`
+  HttpSecurityScheme `json:"-,omitempty`
+  Oauth2Flows `json:"-,omitempty`
+  OpenIdConnect `json:"-,omitempty`
 }

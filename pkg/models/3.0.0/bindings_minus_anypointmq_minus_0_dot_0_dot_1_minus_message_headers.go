@@ -3,6 +3,6 @@ package models
 
 // BindingsMinusAnypointmqMinus_0Dot_0Dot_1MinusMessageHeaders represents a BindingsMinusAnypointmqMinus_0Dot_0Dot_1MinusMessageHeaders model.
 type BindingsMinusAnypointmqMinus_0Dot_0Dot_1MinusMessageHeaders struct {
-  Schema
-  Reference
+  Schema `json:"-,omitempty`
+  Reference `json:"-,omitempty`
 }

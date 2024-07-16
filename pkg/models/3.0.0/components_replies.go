@@ -3,6 +3,6 @@ package models
 
 // ComponentsReplies represents a ComponentsReplies model.
 type ComponentsReplies struct {
-  ModelinaAnyType interface{}
-  ComponentsRepliesPatternProperty_0
+  ModelinaAnyType interface{} `json:"-,omitempty`
+  ComponentsRepliesPatternProperty_0 `json:"-,omitempty`
 }

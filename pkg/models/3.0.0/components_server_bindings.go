@@ -3,6 +3,6 @@ package models
 
 // ComponentsServerBindings represents a ComponentsServerBindings model.
 type ComponentsServerBindings struct {
-  ModelinaAnyType interface{}
-  ComponentsServerBindingsPatternProperty_0
+  ModelinaAnyType interface{} `json:"-,omitempty`
+  ComponentsServerBindingsPatternProperty_0 `json:"-,omitempty`
 }

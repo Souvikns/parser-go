@@ -3,7 +3,7 @@ package models
 
 // MultiFormatSchemaElseSchemaFormat represents a MultiFormatSchemaElseSchemaFormat model.
 type MultiFormatSchemaElseSchemaFormat struct {
-  string
-  MultiFormatSchemaElseSchemaFormatAnyOf_1
-  MultiFormatSchemaElseSchemaFormatAnyOf_2
+  string `json:"-,omitempty`
+  MultiFormatSchemaElseSchemaFormatAnyOf_1 `json:"-,omitempty`
+  MultiFormatSchemaElseSchemaFormatAnyOf_2 `json:"-,omitempty`
 }

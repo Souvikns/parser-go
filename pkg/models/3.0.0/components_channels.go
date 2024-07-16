@@ -3,6 +3,6 @@ package models
 
 // ComponentsChannels represents a ComponentsChannels model.
 type ComponentsChannels struct {
-  ModelinaAnyType interface{}
-  ComponentsChannelsPatternProperty_0
+  ModelinaAnyType interface{} `json:"-,omitempty`
+  ComponentsChannelsPatternProperty_0 `json:"-,omitempty`
 }

@@ -3,6 +3,6 @@ package models
 
 // BindingsMinusSnsMinus_0Dot_1Dot_0MinusOperationConsumerFilterPolicy represents a BindingsMinusSnsMinus_0Dot_1Dot_0MinusOperationConsumerFilterPolicy model.
 type BindingsMinusSnsMinus_0Dot_1Dot_0MinusOperationConsumerFilterPolicy struct {
-  BindingsMinusSnsMinus_0Dot_1Dot_0MinusOperationConsumerFilterPolicyAdditionalProperty
-  ModelinaAnyType interface{}
+  BindingsMinusSnsMinus_0Dot_1Dot_0MinusOperationConsumerFilterPolicyAdditionalProperty `json:"-,omitempty`
+  ModelinaAnyType interface{} `json:"-,omitempty`
 }

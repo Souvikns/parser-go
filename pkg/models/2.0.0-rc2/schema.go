@@ -3,6 +3,6 @@ package models
 
 // Schema represents a Schema model.
 type Schema struct {
-  SchemaObject
-  bool
+  SchemaObject `json:"-,omitempty`
+  bool `json:"-,omitempty`
 }

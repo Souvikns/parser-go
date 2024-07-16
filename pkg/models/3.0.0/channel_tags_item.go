@@ -3,6 +3,6 @@ package models
 
 // ChannelTagsItem represents a ChannelTagsItem model.
 type ChannelTagsItem struct {
-  Reference
-  Tag
+  Reference `json:"-,omitempty`
+  Tag `json:"-,omitempty`
 }

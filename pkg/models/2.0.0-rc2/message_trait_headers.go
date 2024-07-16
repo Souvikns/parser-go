@@ -3,6 +3,6 @@ package models
 
 // MessageTraitHeaders represents a MessageTraitHeaders model.
 type MessageTraitHeaders struct {
-  Reference
-  Schema
+  Reference `json:"-,omitempty`
+  Schema `json:"-,omitempty`
 }

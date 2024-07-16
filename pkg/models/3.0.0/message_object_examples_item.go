@@ -3,5 +3,5 @@ package models
 
 // MessageObjectExamplesItem represents a MessageObjectExamplesItem model.
 type MessageObjectExamplesItem struct {
-  ModelinaAnyType interface{}
+  ModelinaAnyType interface{} `json:"-,omitempty`
 }

@@ -3,6 +3,6 @@ package models
 
 // MessageTraitHeaders represents a MessageTraitHeaders model.
 type MessageTraitHeaders struct {
-  MessageTraitHeadersObject
-  bool
+  MessageTraitHeadersObject `json:"-,omitempty`
+  bool `json:"-,omitempty`
 }

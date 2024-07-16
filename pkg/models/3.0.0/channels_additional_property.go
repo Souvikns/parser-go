@@ -3,6 +3,6 @@ package models
 
 // ChannelsAdditionalProperty represents a ChannelsAdditionalProperty model.
 type ChannelsAdditionalProperty struct {
-  Reference
-  Channel
+  Reference `json:"-,omitempty`
+  Channel `json:"-,omitempty`
 }

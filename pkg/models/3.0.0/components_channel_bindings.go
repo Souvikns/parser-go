@@ -3,6 +3,6 @@ package models
 
 // ComponentsChannelBindings represents a ComponentsChannelBindings model.
 type ComponentsChannelBindings struct {
-  ModelinaAnyType interface{}
-  ComponentsChannelBindingsPatternProperty_0
+  ModelinaAnyType interface{} `json:"-,omitempty`
+  ComponentsChannelBindingsPatternProperty_0 `json:"-,omitempty`
 }

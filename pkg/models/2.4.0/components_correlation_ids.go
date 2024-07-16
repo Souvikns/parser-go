@@ -3,6 +3,6 @@ package models
 
 // ComponentsCorrelationIds represents a ComponentsCorrelationIds model.
 type ComponentsCorrelationIds struct {
-  ModelinaAnyType interface{}
-  ComponentsCorrelationIdsPatternProperty_0
+  ModelinaAnyType interface{} `json:"-,omitempty`
+  ComponentsCorrelationIdsPatternProperty_0 `json:"-,omitempty`
 }
