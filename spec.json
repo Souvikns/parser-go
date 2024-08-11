@@ -1,135 +1,184 @@
 {
-  "asyncapi": "3.0.0",
-  "info": {
-    "title": "Account Service",
-    "version": "1.0.0",
-    "description": "This service is in charge of processing user signups"
-  },
-  "servers": {
-    "mosquitto": {
-      "host": "test.mosquitto.org",
-      "protocol": "mqtts",
-      "security": [
-        {
-          "$ref": "#/components/securitySchemes/X509Certificate",
-          "ModelinaAnyType": null
-        }
-      ],
-      "bindings": {
-        "mqtt": {
-          "bindingVersion": "0.2.0",
-          "clientId": "guest",
-          "cleanSession": true,
-          "keepAlive": 60
-        }
-      }
+    "asyncapi": "3.0.0",
+    "info": {
+        "title": "Account Service",
+        "version": "1.0.0",
+        "description": "This service is in charge of processing user signups"
     },
-    "websockets": { "host": "localhost:3005", "protocol": "ws" }
-  },
-  "channels": {
-    "serverAnnounce": {
-      "address": "server/announce",
-      "messages": {
-        "ServerAnnounce": { "$ref": "#/components/messages/ServerAnnounce" }
-      }
-    },
-    "userSignedUp": {
-      "address": "/user/signedup",
-      "messages": {
-        "UserSignedUp": { "$ref": "#/components/messages/UserSignedUp" }
-      },
-      "bindings": {
-        "ws": {
-          "bindingVersion": "0.1.0",
-          "query": {
-            "additionalProperties": {},
-            "properties": {
-              "salutation": { "default": "Hello", "type": "string" }
-            },
-            "type": "object"
-          },
-          "headers": {
-            "properties": {
-              "my-custom-header": { "const": "custom value", "type": "string" }
-            },
-            "type": "object"
-          }
-        }
-      }
-    }
-  },
-  "operations": {
-    "recieveUserSignedUp": {
-      "action": "receive",
-      "channel": { "$ref": "#/channels/userSignedUp" },
-      "messages": [{ "$ref": "#/channels/userSignedUp/messages/UserSignedUp" }],
-      "bindings": {
-        "mqtt": { "bindingVersion": "0.2.0", "qos": 0, "retain": true }
-      }
-    },
-    "sendServerAnnounce": {
-      "action": "send",
-      "channel": { "$ref": "#/channels/serverAnnounce" },
-      "messages": [
-        { "$ref": "#/channels/serverAnnounce/messages/ServerAnnounce" }
-      ]
-    },
-    "sendSignedUpUser": {
-      "action": "send",
-      "channel": { "$ref": "#/channels/userSignedUp" },
-      "messages": [{ "$ref": "#/channels/userSignedUp/messages/UserSignedUp" }]
-    }
-  },
-  "components": {
-    "messages": {
-      "EmailSent": {
-        "ModelinaAnyType": null,
-        "payload": {
-          "required": ["email", "timestamp"],
-          "additionalProperties": {},
-          "properties": {
-            "email": {
-              "description": "Email of the user",
-              "type": "string",
-              "format": "email"
-            },
-            "timestamp": { "type": "string", "format": "date-time" }
-          },
-          "type": "object"
-        }
-      },
-      "ServerAnnounce": {
-        "ModelinaAnyType": null,
-        "payload": {
-          "required": ["id"],
-          "additionalProperties": {},
-          "properties": { "id": { "type": "string" } },
-          "type": "object"
-        }
-      },
-      "UserSignedUp": {
-        "ModelinaAnyType": null,
-        "payload": {
-          "required": ["displayName", "email"],
-          "additionalProperties": {},
-          "properties": {
-            "displayName": {
-              "description": "Name of the user",
-              "type": "string"
-            },
-            "email": {
-              "description": "Email of the user",
-              "type": "string",
-              "format": "email"
+    "servers": {
+        "mosquitto": {
+            "host": "test.mosquitto.org",
+            "protocol": "mqtts",
+            "security": [
+                {
+                    "$ref": "#/components/securitySchemes/X509Certificate",
+                    "ModelinaAnyType": null
+                }
+            ],
+            "bindings": {
+                "mqtt": {
+                    "bindingVersion": "0.2.0",
+                    "clientId": "guest",
+                    "cleanSession": true,
+                    "keepAlive": 60
+                }
             }
-          },
-          "type": "object"
+        },
+        "websockets": {
+            "host": "localhost:3005",
+            "protocol": "ws"
         }
-      }
     },
-    "securitySchemes": {
-      "X509Certificate": { "ModelinaAnyType": null },
-      "userAndPassword": { "ModelinaAnyType": null }
+    "channels": {
+        "serverAnnounce": {
+            "address": "server/announce",
+            "messages": {
+                "ServerAnnounce": {
+                    "$ref": "#/components/messages/ServerAnnounce"
+                }
+            }
+        },
+        "userSignedUp": {
+            "address": "/user/signedup",
+            "messages": {
+                "UserSignedUp": {
+                    "$ref": "#/components/messages/UserSignedUp"
+                }
+            },
+            "bindings": {
+                "ws": {
+                    "bindingVersion": "0.1.0",
+                    "query": {
+                        "additionalProperties": {},
+                        "properties": {
+                            "salutation": {
+                                "default": "Hello",
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "headers": {
+                        "properties": {
+                            "my-custom-header": {
+                                "const": "custom value",
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    }
+                }
+            }
+        }
+    },
+    "operations": {
+        "recieveUserSignedUp": {
+            "action": "receive",
+            "channel": {
+                "$ref": "#/channels/userSignedUp"
+            },
+            "messages": [
+                {
+                    "$ref": "#/channels/userSignedUp/messages/UserSignedUp"
+                }
+            ],
+            "bindings": {
+                "mqtt": {
+                    "bindingVersion": "0.2.0",
+                    "qos": 0,
+                    "retain": true
+                }
+            }
+        },
+        "sendServerAnnounce": {
+            "action": "send",
+            "channel": {
+                "$ref": "#/channels/serverAnnounce"
+            },
+            "messages": [
+                {
+                    "$ref": "#/channels/serverAnnounce/messages/ServerAnnounce"
+                }
+            ]
+        },
+        "sendSignedUpUser": {
+            "action": "send",
+            "channel": {
+                "$ref": "#/channels/userSignedUp"
+            },
+            "messages": [
+                {
+                    "$ref": "#/channels/userSignedUp/messages/UserSignedUp"
+                }
+            ]
+        }
+    },
+    "components": {
+        "messages": {
+            "EmailSent": {
+                "ModelinaAnyType": null,
+                "payload": {
+                    "required": [
+                        "email",
+                        "timestamp"
+                    ],
+                    "properties": {
+                        "email": {
+                            "description": "Email of the user",
+                            "type": "string",
+                            "format": "email"
+                        },
+                        "timestamp": {
+                            "type": "string",
+                            "format": "date-time"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "ServerAnnounce": {
+                "ModelinaAnyType": null,
+                "payload": {
+                    "required": [
+                        "id"
+                    ],
+                    "properties": {
+                        "id": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "UserSignedUp": {
+                "ModelinaAnyType": null,
+                "payload": {
+                    "required": [
+                        "displayName",
+                        "email"
+                    ],
+                    "properties": {
+                        "displayName": {
+                            "description": "Name of the user",
+                            "type": "string"
+                        },
+                        "email": {
+                            "description": "Email of the user",
+                            "type": "string",
+                            "format": "email"
+                        }
+                    },
+                    "type": "object"
+                }
+            }
+        },
+        "securitySchemes": {
+            "X509Certificate": {
+                "ModelinaAnyType": null
+            },
+            "userAndPassword": {
+                "ModelinaAnyType": null
+            }
+        }
     }
-  }
 }
