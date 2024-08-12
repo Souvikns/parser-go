@@ -122,6 +122,7 @@
                         "email",
                         "timestamp"
                     ],
+                    "additionalProperties": {},
                     "properties": {
                         "email": {
                             "description": "Email of the user",
@@ -142,6 +143,7 @@
                     "required": [
                         "id"
                     ],
+                    "additionalProperties": {},
                     "properties": {
                         "id": {
                             "type": "string"
@@ -157,6 +159,7 @@
                         "displayName",
                         "email"
                     ],
+                    "additionalProperties": {},
                     "properties": {
                         "displayName": {
                             "description": "Name of the user",
