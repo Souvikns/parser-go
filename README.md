@@ -10,11 +10,12 @@ go get github.com/Souvikns/parser-go
 ```
 
 ### Usage 
-The package exposes three main functions, `Parse`, `ParseFromFile`, `ParseFromUrl`.
+The package exposes four main functions, `Parse`, `ParseFromFile`, `ParseFromUrl` and `Validate()`.
 
 - `Parse()` - function that validates the passed AsyncAPI document, It expects document as a string format
 - `ParseFromFile()` - function that validates the passed AsyncAPI document and it reads the document from a file path that is provided.
 - `ParseFromUrl()` - function that validates the passed AsyncAPI document and it reads the document from a URL.
+- `Validate()` - function that validates the passed AsyncAPI document, Return boolean to signify the validation status and errors if any. 
 
 The package also exposes AsyncAPI models as per versions. 
 
@@ -84,6 +85,16 @@ The `ParseFromUrl` function takes the url as a string and an object of type `int
 func main(){
 	var asyncapi parser.Asyncapi_3_0_0
 	err := parser.ParseFromUrl("https://localhost:8080/spec", &asyncapi)
+}
+```
+
+#### `Validate(document string)`
+
+The `Validate` function takes the AsyncAPI specification as a string and returns `true` if valid and `false` if invalid, along with the appropriate errors. 
+
+```go
+func main() {
+    isValid := parser.Validate(asyncapi) // True if valid and False if invalid
 }
 ```
 
