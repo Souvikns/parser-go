@@ -1,5 +1,5 @@
 
-# AsyncAPI Parser (GO) V0.0.2
+# AsyncAPI Parser (GO) V0.0.1
 
 AsyncAPI parser written for `Go` applications, supports v2 to v3 AsyncAPI specification. 
 
