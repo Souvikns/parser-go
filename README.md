@@ -10,11 +10,25 @@ go get github.com/Souvikns/parser-go
 ```
 
 ### Usage 
-The package exposes three main functions, `Parse`, `ParseFromFile`, `ParseFromUrl`
+The package exposes three main functions, `Parse`, `ParseFromFile`, `ParseFromUrl`.
 
 - `Parse()` - function that validates the passed AsyncAPI document, It expects document as a string format
 - `ParseFromFile()` - function that validates the passed AsyncAPI document and it reads the document from a file path that is provided.
 - `ParseFromUrl()` - function that validates the passed AsyncAPI document and it reads the document from a URL.
+
+The package also exposes AsyncAPI models as per versions. 
+
+|models|
+|----|
+|Asyncapi_3_0_0|
+|Asyncapi_2_6_0|
+|Asyncapi_2_5_0|
+|Asyncapi_2_4_0|
+|Asyncapi_2_3_0|
+|Asyncapi_2_2_0|
+|Asyncapi_2_1_0|
+|Asyncapi_2_1_0|
+|Asyncapi_2_0_0|
 
 ### Example
 
@@ -41,6 +55,8 @@ func main() {
 
 #### `Parse(document string, obj *k) error`
 
+The `Parse` functions takes the `AsyncAPI` document as string and an object of type `interface{}` as argument to validate and parse the specification file.
+
 ```go
 func main(){
 	var asyncapi parser.Asyncapi_3_0_0
@@ -51,6 +67,8 @@ func main(){
 
 #### `ParseFromFile(filepath string, obj *k) error`
 
+The `ParseFromFile` function takes the filepath as string and an object of type `interface{}` as argument to validate and parse the specification file.
+
 ```go
 func main(){
 	var asyncapi parser.Asyncapi_3_0_0
@@ -60,6 +78,7 @@ func main(){
 
 #### `ParseFromUrl(url string, obj *k) error`
 
+The `ParseFromUrl` function takes the url as a string and an object of type `interface{}` as argument to validate and parse the specification file. 
 
 ```go
 func main(){
