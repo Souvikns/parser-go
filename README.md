@@ -39,12 +39,34 @@ func main() {
 
 ### API
 
-#### `Parse[K Asyncapi_3_0_0 | Asyncapi_2_6_0 | Asyncapi_2_5_0 | Asyncapi_2_4_0 | Asyncapi_2_3_0 | Asyncapi_2_2_0 | Asyncapi_2_1_0 | Asyncapi_2_0_0](document string, obj *k) error`
+#### `Parse(document string, obj *k) error`
+
+```go
+func main(){
+	var asyncapi parser.Asyncapi_3_0_0
+	err := parser.Parse(asyncapiDoc, &asyncapi)
+}
+```
 
 
-#### `ParseFromFile[K Asyncapi_3_0_0 | Asyncapi_2_6_0 | Asyncapi_2_5_0 | Asyncapi_2_4_0 | Asyncapi_2_3_0 | Asyncapi_2_2_0 | Asyncapi_2_1_0 | Asyncapi_2_0_0](filepath string, obj *k) error`
+#### `ParseFromFile(filepath string, obj *k) error`
 
-#### `ParseFromUrl[K Asyncapi_3_0_0 | Asyncapi_2_6_0 | Asyncapi_2_5_0 | Asyncapi_2_4_0 | Asyncapi_2_3_0 | Asyncapi_2_2_0 | Asyncapi_2_1_0 | Asyncapi_2_0_0](url string, obj *k) error`
+```go
+func main(){
+	var asyncapi parser.Asyncapi_3_0_0
+	err := parser.ParseFromFile("./asyncapi.yaml", &asyncapi)
+}
+```
+
+#### `ParseFromUrl(url string, obj *k) error`
+
+
+```go
+func main(){
+	var asyncapi parser.Asyncapi_3_0_0
+	err := parser.ParseFromUrl("https://localhost:8080/spec", &asyncapi)
+}
+```
 
 
 ### Develop
