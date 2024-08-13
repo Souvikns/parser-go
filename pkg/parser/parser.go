@@ -6,6 +6,7 @@ import (
 	"io"
 	"net/http"
 	"os"
+
 	parserError "github.com/Souvikns/parser-go/pkg/error"
 	schemes "github.com/asyncapi/spec-json-schemas/v6"
 	"github.com/xeipuuv/gojsonschema"
@@ -21,6 +22,26 @@ type Document struct {
 	Doc      map[string]any
 	FileType string
 	RawDoc   []byte
+}
+
+func Validate(document string) (bool, error) {
+	doc, err := loadDocument([]byte(document))
+	if err != nil {
+		return false, err
+	}
+	version, found := extractVersion((doc.Doc))
+	if !found {
+		return false, errors.New("missing asyncapi property")
+	}
+	schema, err := schemes.Get(version)
+	if err != nil {
+		return false, err
+	}
+	err = validateSchema(schema, doc.Doc)
+	if err != nil {
+		return false, err
+	}
+	return true, nil
 }
 
 func Parse[K Asyncapi_3_0_0 | Asyncapi_2_6_0 | Asyncapi_2_5_0 | Asyncapi_2_4_0 | Asyncapi_2_3_0 | Asyncapi_2_2_0 | Asyncapi_2_1_0 | Asyncapi_2_0_0](document string, obj *K) error {
