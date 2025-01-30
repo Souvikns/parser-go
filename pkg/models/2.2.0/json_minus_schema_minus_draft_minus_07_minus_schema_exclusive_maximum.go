@@ -1,8 +1,0 @@
-
-package models
-
-// JsonMinusSchemaMinusDraftMinus_07MinusSchemaExclusiveMaximum represents a JsonMinusSchemaMinusDraftMinus_07MinusSchemaExclusiveMaximum model.
-type JsonMinusSchemaMinusDraftMinus_07MinusSchemaExclusiveMaximum struct {
-  float64
-  bool
-}
