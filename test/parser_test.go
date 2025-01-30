@@ -3,13 +3,12 @@ package test
 import (
 	"testing"
 
-	"github.com/Souvikns/parser-go/pkg/parser"
+	parser "github.com/Souvikns/parser-go/pkg"
 	"github.com/stretchr/testify/assert"
 )
 
 func TestV3Spec(t *testing.T) {
-	var asyncapi parser.Asyncapi_3_0_0
-	err := parser.Parse(string(SPEC_3_0_0), &asyncapi)
+	valid, err := parser.Validate(SPEC_3_0_0)
 	assert.Nil(t, err)
-	assert.Equal(t, asyncapi.Asyncapi, "3.0.0")
+	assert.True(t, valid)
 }
